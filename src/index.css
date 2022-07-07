@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "GiloryLight";
+    src: url("./assets/fonts/Gilroy-Light.ttf");
+}
+
+@font-face {
+    font-family: "GiloryRegular";
+    src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GiloryMedium";
+    src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: "GilorySemiBold";
+    src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "GiloryBold";
+    src: url("./assets/fonts/Gilroy-Bold.ttf");
+}
+
+body {
+    margin: 0;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'GiloryMedium';
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
