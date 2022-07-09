@@ -5,7 +5,6 @@ import InputHandler from "../../components/InputHandler";
 import {Alert, Box, Button, Typography} from "@mui/material";
 import {
     LoginContainerStyle,
-    LoginForgotPassword,
     LoginFormContent,
     LoginFormMessage,
     LoginFormStyle,
@@ -20,6 +19,7 @@ import {auth} from "../../firebase";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {signIn} from "../../features/user/userSlice";
+import accountSchema from "../../validations/accountSchema";
 
 
 const Register = () => {
@@ -47,14 +47,15 @@ const Register = () => {
                     <img src={SideImage} alt="Sign in to Sha2a - Real E-state Platform"/>
                 </Box>
                 <Box sx={LoginFormStyle}>
-                    <Formik initialValues={{email: "", password: ""}} onSubmit={(values) => {
-                        onSignUp(values)
-                    }}>
+                    <Formik validationSchema={accountSchema} initialValues={{email: "", password: ""}}
+                            onSubmit={(values) => {
+                                onSignUp(values)
+                            }}>
                         {() => (
                             <Form style={LoginFormContent}>
                                 <Typography variant={"h1"} sx={LoginFormTitle}>Create New Account</Typography>
-                                <Typography variant={"h3"} sx={LoginFormMessage}>Full the Field to
-                                    registration</Typography>
+                                <Typography variant={"h3"} sx={LoginFormMessage}>Fill the Fields to
+                                    create an account</Typography>
                                 <InputHandler placeholder={"Write your email."} name={"email"} label={"Email"}/>
                                 <InputHandler placeholder={"Write your Password."} name={"password"}
                                               label={"Password"} type={"password"}/>

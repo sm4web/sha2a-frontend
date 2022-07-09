@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import SideImage from '../../assets/images/signin-side.svg'
 import {Form, Formik} from 'formik'
 import InputHandler from "../../components/InputHandler";
-import {Alert, Box, Button, Typography} from "@mui/material";
+import {Alert, Box, Button, Divider, Typography} from "@mui/material";
 import {
     LoginContainerStyle,
     LoginForgotPassword,
@@ -20,9 +20,11 @@ import {auth} from "../../firebase";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {signIn} from "../../features/user/userSlice";
+import accountSchema from "../../validations/accountSchema";
 
 
 const Login = () => {
+
     const [error, setError] = useState(null)
     const router = useNavigate()
     const dispatch = useDispatch()
@@ -31,7 +33,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, values.email, values.password).then(userData => {
             dispatch(signIn(userData?.user))
             if (userData?.user) {
-                router('/home')
+                router('/personal-info?step=2')
             }
         }).catch(err => {
             const newMessage = err?.message
@@ -39,7 +41,8 @@ const Login = () => {
 
         })
     }
-    console.log(error)
+
+
     return (
         <Box sx={LoginStyle}>
             <Box sx={LoginContainerStyle}>
@@ -47,9 +50,10 @@ const Login = () => {
                     <img src={SideImage} alt="Sign in to Sha2a - Real E-state Platform"/>
                 </Box>
                 <Box sx={LoginFormStyle}>
-                    <Formik initialValues={{email: "", password: ""}} onSubmit={(values) => {
-                        onSignIn(values)
-                    }}>
+                    <Formik validationSchema={accountSchema} initialValues={{email: "", password: ""}}
+                            onSubmit={(values) => {
+                                onSignIn(values)
+                            }}>
                         {() => (
                             <Form style={LoginFormContent}>
                                 <Typography variant={"h1"} sx={LoginFormTitle}>Hello! Welcome back.</Typography>
@@ -59,7 +63,8 @@ const Login = () => {
                                 <InputHandler placeholder={"Write your Password."} name={"password"}
                                               label={"Password"} type={"password"}/>
                                 <Typography variant={"h3"} sx={LoginForgotPassword}>Forgot Password ?</Typography>
-                                <Button type={"submit"} sx={LoginSubmitButton}>Sign in</Button>
+                                <Button variant={"contained"} type={"submit"} sx={LoginSubmitButton}>Sign in</Button>
+                                <Divider>OR</Divider>
                                 <GoogleAuth/>
                                 {error && <Alert severity="error">{error}</Alert>}
                             </Form>

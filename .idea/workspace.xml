@@ -2,60 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sha2a.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-Heavy.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Gilroy-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/email-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/location-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/offering-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/password-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/phone-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/search-field-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/seeking-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/upload-profile-picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/user-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/demo-ad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/google-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/search-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/signin-side.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/signup-side-svg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/signup-side.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InputHandler/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SideWrapper/SideWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/protectedRoute/protectedRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/register/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Stepper/Stepper.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Stepper/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/personalInfoForm/personalInfoForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/personalInfoForm/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reverseProtectedRoute/protectedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/uploadPicture/UploadPicture.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/uploadPicture/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userTypeForm/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userTypeForm/userTypeForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/completeRegister/completeRegister.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/completeRegister/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validations/accountSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/counter/Counter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/counter/Counter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/counter/counterAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/counter/counterSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputHandler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputHandler/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/protectedRoute/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/protectedRoute/reverseProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/sha2a/src/pages",
+    "last_opened_file_path": "E:/sha2a/src/components",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,8 +74,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\sha2a\src\pages" />
       <recent name="E:\sha2a\src\components" />
+      <recent name="E:\sha2a\src" />
+      <recent name="E:\sha2a\src\components\userTypeForm" />
+      <recent name="E:\sha2a\src\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\sha2a\src\components\Header" />
@@ -120,7 +95,8 @@
       <workItem from="1656926969059" duration="4028000" />
       <workItem from="1657101546580" duration="10738000" />
       <workItem from="1657120420638" duration="325000" />
-      <workItem from="1657120764496" duration="13446000" />
+      <workItem from="1657120764496" duration="17127000" />
+      <workItem from="1657268701877" duration="11987000" />
     </task>
     <servers />
   </component>

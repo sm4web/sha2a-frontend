@@ -2,12 +2,29 @@ import React from 'react';
 import styles from './Header.module.scss'
 import {Link, useNavigate} from "react-router-dom";
 import {Helmet} from "react-helmet";
+import {useSelector} from "react-redux";
+
 
 const Header = () => {
     const router = useNavigate()
+    const loggedIn = useSelector(state => state.user.loggedIn)
     const handleRoute = (event) => {
         const route = event.target.name
         router(`${route}`)
+    }
+
+
+    const RenderOptions = () => {
+        if (!loggedIn) {
+            return <div className={`${styles.header__options} ${styles.header__desktop}`}>
+                <button name={"login"} onClick={handleRoute} className={styles.header__loginOption}>
+                    Login
+                </button>
+                <button name={"register"} onClick={handleRoute} className={styles.header__registerOption}>
+                    Sign up
+                </button>
+            </div>;
+        }
     }
     return (
         <div className={styles.header}>
@@ -37,14 +54,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <div className={`${styles.header__options} ${styles.header__desktop}`}>
-                    <button name={"login"} onClick={handleRoute} className={styles.header__loginOption}>
-                        Login
-                    </button>
-                    <button name={"register"} onClick={handleRoute} className={styles.header__registerOption}>
-                        Sign up
-                    </button>
-                </div>
+               <RenderOptions />
             </div>
         </div>
     );

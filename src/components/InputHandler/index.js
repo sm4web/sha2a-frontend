@@ -62,9 +62,6 @@ export const NormalInputStyle = {
             borderRadius: "10px",
             border: "none",
         },
-        "&.Mui-focused fieldset": {
-            border: "2px solid #2C4CC9",
-        },
     },
 };
 export default InputHandler;

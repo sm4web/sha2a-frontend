@@ -37,19 +37,19 @@ export const LoginFormContent = {
 }
 
 export const LoginFormTitle = {
-    fontSize: "32px",
+    fontSize: {md: "32px", xs: "24px"},
     color: "#2C4CC9",
 }
 
 export const LoginFormMessage = {
-    fontSize: "20px",
+    fontSize: {md: "20px", xs: "16px"},
     color: "#fff",
 }
 
 export const LoginForgotPassword = {
     color: "#2c4cc9",
     fontFamily: "GiloryMedium",
-    fontSize: "20px",
+    fontSize: {md: "20px", xs: "16px"},
     cursor: "pointer"
 }
 
@@ -58,9 +58,9 @@ export const LoginSubmitButton = {
     borderRadius: "8px",
     bgcolor: "#2c4cc9",
     width: "100%",
-    height: "60px",
+    height: {md: "60px", xs: "45px"},
     color: "#fff",
-    fontSize: "20px",
+    fontSize: {md: "20px", xs: "16px"},
     fontFamily: "GiloryBold",
     textTransform: "capitalize"
 }

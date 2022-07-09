@@ -4,8 +4,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
 import SideWrapper from "./components/SideWrapper/SideWrapper";
 import Login from "./pages/login/login.jsx";
-import ProtectedRoute from "./components/protectedRoute/protectedRoute";
+import ProtectedRoute from "./components/protectedRoute/reverseProtectedRoute";
 import Register from "./pages/register/register";
+import CompleteRegister from "./pages/completeRegister/completeRegister";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     {/*  All the register steps  */}
                     <Route exact path={"/login"} element={<Login/>}/>
                     <Route exact path={"/register"} element={<Register/>}/>
+                    <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
                     <Route element={<ProtectedRoute/>}>
 
                         <Route path={"/home"} element={<SideWrapper/>}>

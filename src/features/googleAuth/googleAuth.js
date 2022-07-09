@@ -15,7 +15,7 @@ const GoogleAuth = () => {
         const provider = new GoogleAuthProvider()
         signInWithPopup(auth, provider).then(userData => {
             dispatch(signIn(userData?.user))
-            router('/home')
+            router('/personal-info?step=2')
         }).catch(err => {
             console.log(err)
         })
@@ -32,7 +32,7 @@ const GoogleAuth = () => {
 };
 const LoginGoogleSignin = {
     width: "100%",
-    height: "60px",
+    height: {md: "60px", xs: "45px"},
     borderRadius: "8px",
     bgcolor: "#ECF2F7",
     padding: "0 12px",
