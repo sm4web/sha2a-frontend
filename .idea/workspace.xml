@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ad-navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/favorites-navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/home-navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/logout-navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/settings-navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FIlterSection/FilterSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FIlterSection/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/priceSlider/priceSlider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/priceSlider/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/images.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideWrapper/SideWrapper.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideNav/sideNav.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideNav/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideNav/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/completeRegister/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/completeRegister/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FIlterSection/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FIlterSection/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +79,7 @@
       <workItem from="1657120764496" duration="17127000" />
       <workItem from="1657268701877" duration="13383000" />
       <workItem from="1657527922663" duration="2523000" />
-      <workItem from="1657531652545" duration="7158000" />
+      <workItem from="1657531652545" duration="9099000" />
     </task>
     <servers />
   </component>

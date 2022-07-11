@@ -4,7 +4,7 @@ import FilterSection from "../../components/FIlterSection/FilterSection";
 
 const Home = () => {
     return (
-        <Box sx={{p: 2, display: "flex", flexDirection: "column",flexGrow:1}}>
+        <Box sx={{p: 2, display: "flex", flexDirection: "column", flexGrow: 1}}>
             <FilterSection/>
         </Box>
     );

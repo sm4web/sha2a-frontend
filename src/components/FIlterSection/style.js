@@ -1,5 +1,5 @@
 export const ContainerStyle = {
-    p: {md: 4, xs: 2},
+    p: {md: `${4 * 8}px 5%`, xs: 2},
     bgcolor: "rgba(67,105,253,0.2)",
     display: "flex",
     flexDirection: "column",

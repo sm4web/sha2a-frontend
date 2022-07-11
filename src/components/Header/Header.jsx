@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './Header.module.scss'
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import {useSelector} from "react-redux";
+import {MessageCircle} from 'tabler-icons-react';
+import {Avatar} from '@mantine/core';
+import {Typography} from "@mui/material";
 
 
 const Header = () => {
@@ -24,8 +27,23 @@ const Header = () => {
                     Sign up
                 </button>
             </div>;
+        } else {
+            return (
+                <div className={styles.header__userOptions}>
+                    <MessageCircle color={"white"}/>
+                    <div className={styles.header__userAvatar}>
+                        <Avatar radius={"xl"}
+                                src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbY3v1BLGcs377egpKrACqT0K_-6o_ldiWA&usqp=CAU"}
+                                alt={"it's me"}/>
+                        <h3>
+                            Saif Mohamed
+                        </h3>
+                    </div>
+                </div>
+            )
         }
     }
+
     return (
         <div className={styles.header}>
             <Helmet>
@@ -38,23 +56,8 @@ const Header = () => {
                 <div className={styles.header__logo}>
                     <h3>LOGO</h3>
                 </div>
-                <nav className={`${styles.header__nav} ${styles.header__desktop}`}>
-                    <ul>
-                        <li>
-                            <Link to={"/home"}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to={"/"}>Service</Link>
-                        </li>
-                        <li>
-                            <Link to={"/"}>About Us</Link>
-                        </li>
-                        <li>
-                            <Link to={"/"}>Contact Us</Link>
-                        </li>
-                    </ul>
-                </nav>
-               <RenderOptions />
+
+                <RenderOptions/>
             </div>
         </div>
     );

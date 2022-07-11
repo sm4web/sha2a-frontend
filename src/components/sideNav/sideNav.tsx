@@ -6,7 +6,11 @@ import {signOut} from '../../features/user/userSlice'
 
 const useStyles = createStyles((theme) => ({
     navbar: {
-        backgroundColor: "#0B0E16"
+        backgroundColor: "#0B0E16",
+        [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+            // Type safe child reference in nested selectors via ref
+            display: "none"
+        },
     },
     link: {
         width: 50,
@@ -19,6 +23,7 @@ const useStyles = createStyles((theme) => ({
         '&:hover': {
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
         },
+
     },
 
     active: {
