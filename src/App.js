@@ -14,10 +14,11 @@ function App() {
             <BrowserRouter>
                 <Header/>
                 <Routes>
-                    {/*  All the register steps  */}
+                    {/*  START -- All the register steps  */}
                     <Route exact path={"/login"} element={<Login/>}/>
                     <Route exact path={"/register"} element={<Register/>}/>
                     <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
+                    {/*  END -- All the register steps  */}
                     <Route element={<ProtectedRoute/>}>
                         <Route path={"/home"} element={<SideWrapper/>}>
                             <Route exact path={"user"} element={<h1>user</h1>}/>

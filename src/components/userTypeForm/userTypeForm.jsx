@@ -14,10 +14,11 @@ import {Card, CardActive, ContainerStyle, ContentContainer, Title, UTypeSubmitBu
 import SeekingIcon from '../../assets/icons/seeking-icon.png'
 import OfferingIcon from '../../assets/icons/offering-icon.png'
 import {Helmet} from "react-helmet";
+import {useNavigate} from "react-router-dom";
 
 const UserTypeForm = () => {
     const [active, setActive] = useState("");
-
+    const router = useNavigate()
     const Options = [
         {label: "Seeking", img: SeekingIcon, id: "seeking"},
         {
@@ -81,7 +82,7 @@ const UserTypeForm = () => {
                         </FormControl>
                     </Grid>
                     <Grid item container xs={12}>
-                        <Button variant="contained" sx={UTypeSubmitButton}>
+                        <Button onClick={() => router('/home/user')} variant="contained" sx={UTypeSubmitButton}>
                             Next
                         </Button>
                     </Grid>
