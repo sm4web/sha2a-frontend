@@ -8,11 +8,11 @@ import {
     FilteringSelectorsContainer,
     FilterSubmitButton
 } from "./style";
-import InputHandler from "../InputHandler";
+import InputHandler from "../input-handler";
 import {Form, Formik} from "formik";
 import {Button, InputAdornment, MenuItem} from "@mui/material";
 import {images} from "../../constants";
-import PriceSlider from "../priceSlider/priceSlider";
+import PriceSlider from "../price-slider/priceSlider";
 
 
 const SearchBar = () => {

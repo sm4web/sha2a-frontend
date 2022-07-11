@@ -1,10 +1,10 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import CustomizedSteppers from "../../components/Stepper/Stepper";
+import CustomizedSteppers from "../../components/stepper/Stepper";
 import {PersonalInfoStyle} from "./style";
 import {useSearchParams} from "react-router-dom";
-import PersonalInfoForm from "../../components/personalInfoForm/personalInfoForm";
-import UserTypeForm from "../../components/userTypeForm/userTypeForm";
+import PersonalInfoForm from "../../components/personal-info-form/personalInfoForm";
+import UserTypeForm from "../../components/user-type-form/userTypeForm";
 
 const RenderFormByStep = () => {
     const [step, setStep] = useSearchParams()

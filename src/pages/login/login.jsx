@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import SideImage from '../../assets/images/signin-side.svg'
 import {Form, Formik} from 'formik'
-import InputHandler from "../../components/InputHandler";
+import InputHandler from "../../components/input-handler";
 import {Alert, Box, Button, Divider, Typography} from "@mui/material";
 import {
     Login__DontHaveAccount,

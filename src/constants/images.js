@@ -6,6 +6,9 @@ import OfferingIcon from "../assets/icons/offering-icon.png";
 import searchIcon from '../assets/icons/search-field-icon.png'
 import clearIcon from '../assets/icons/clearIcon.png'
 import locationIcon from '../assets/icons/location-icon.png'
+import adImageDemo from '../assets/images/demo-ad.png'
+
+
 export default {
     signinHero,
     signupHero,
@@ -14,5 +17,6 @@ export default {
     SeekingIcon,
     OfferingIcon,
     locationIcon,
-    clearIcon
+    clearIcon,
+    adImageDemo
 };

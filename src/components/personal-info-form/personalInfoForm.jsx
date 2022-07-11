@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {Box, Button, Typography} from "@mui/material";
 import {Form, Formik} from "formik";
-import UploadPicture from "../uploadPicture/UploadPicture";
+import UploadPicture from "../upload-profile-picture/UploadPicture";
 import {PInfoCustomDropDown, PInfoForm, PInfoFormContent, PInfoStyle, PInfoSubmitButton} from "./style";
-import InputHandler from "../InputHandler";
+import InputHandler from "../input-handler";
 import {useSearchParams} from "react-router-dom";
 import personalInfoSchema from "../../validations/personalInfoSchema";
 import {CountryDropdown, RegionDropdown} from "react-country-region-selector";

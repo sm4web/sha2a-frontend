@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
-import Header from "./components/Header/Header.jsx";
+import Header from "./components/header/Header.jsx";
 import Login from "./pages/login/login.jsx";
-import ProtectedRoute from "./components/handleAuth/protectedRoute";
+import ProtectedRoute from "./components/protected-routes/protectedRoute";
 import Register from "./pages/register/register";
 import CompleteRegister from "./pages/completeRegister/completeRegister";
-import SideNav from "./components/sideNav/sideNav.tsx";
+import SideNav from "./components/side-nav/sideNav.tsx";
 import Home from "./pages/home/Home";
 
 

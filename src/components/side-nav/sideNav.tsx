@@ -19,8 +19,9 @@ const useStyles = createStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+        color: "#fff",
         '&:hover': {
+            color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
         },
 
@@ -80,7 +81,7 @@ const SideNav = () => {
     ));
 
     return (
-        <Navbar className={classes.navbar} height={"calc(100vh - 90px)"} width={{base: 100}} p="sm">
+        <Navbar className={classes.navbar} height={"100vh"} width={{base: 100}} p="sm">
             <Navbar.Section grow mt={50}>
                 <Group direction="column" align="center" spacing={60}>
                     {links}
