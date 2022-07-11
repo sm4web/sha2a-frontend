@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FIlterSection/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FIlterSection/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sortingBar/sortingBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sortingBar/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/sha2a/src",
+    "last_opened_file_path": "E:/sha2a/src/components",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -56,8 +53,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\sha2a\src" />
       <recent name="E:\sha2a\src\components" />
+      <recent name="E:\sha2a\src" />
       <recent name="E:\sha2a\src\components\userTypeForm" />
       <recent name="E:\sha2a\src\pages" />
     </key>
@@ -80,7 +77,7 @@
       <workItem from="1657120764496" duration="17127000" />
       <workItem from="1657268701877" duration="13383000" />
       <workItem from="1657527922663" duration="2523000" />
-      <workItem from="1657531652545" duration="9437000" />
+      <workItem from="1657531652545" duration="9737000" />
     </task>
     <servers />
   </component>
