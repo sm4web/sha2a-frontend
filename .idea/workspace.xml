@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Stepper/Stepper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Stepper/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/personalInfoForm/personalInfoForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/personalInfoForm/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reverseProtectedRoute/protectedRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uploadPicture/UploadPicture.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/uploadPicture/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userTypeForm/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userTypeForm/userTypeForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/completeRegister/completeRegister.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/completeRegister/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validations/accountSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InputHandler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputHandler/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/protectedRoute/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/protectedRoute/reverseProtectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/protectedRoute/reverseProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reverseAuth/reverseProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reverseProtectedRoute/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/handleAuth/protectedRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/sha2a/src/components",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/sha2a/src/components&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\sha2a\src\components" />
@@ -96,7 +75,8 @@
       <workItem from="1657101546580" duration="10738000" />
       <workItem from="1657120420638" duration="325000" />
       <workItem from="1657120764496" duration="17127000" />
-      <workItem from="1657268701877" duration="11987000" />
+      <workItem from="1657268701877" duration="13383000" />
+      <workItem from="1657527922663" duration="1525000" />
     </task>
     <servers />
   </component>
