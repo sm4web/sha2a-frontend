@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    loggedIn: false,
+    loggedIn: true,
     data: null
 };
 
@@ -14,14 +14,14 @@ export const counterSlice = createSlice({
             state.data = action.payload
             state.loggedIn = true
         },
-        signOut: (state, action) => {
+        signOut: (state) => {
             state.data = null;
             state.loggedIn = false;
         }
     },
 });
 
-export const {signIn} = counterSlice.actions;
+export const {signIn, signOut} = counterSlice.actions;
 
 
 export default counterSlice.reducer;

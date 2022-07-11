@@ -1,30 +1,43 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
-import SideWrapper from "./components/SideWrapper/SideWrapper";
 import Login from "./pages/login/login.jsx";
 import ProtectedRoute from "./components/handleAuth/protectedRoute";
 import Register from "./pages/register/register";
 import CompleteRegister from "./pages/completeRegister/completeRegister";
+import SideNav from "./components/sideNav/sideNav.tsx";
+import Home from "./pages/home/Home";
+
+
+const Layout = () => {
+    return (
+        <div>
+            <Header/>
+            <div style={{display: "flex"}}>
+                <SideNav/>
+                <Outlet/>
+            </div>
+        </div>
+    );
+}
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header/>
                 <Routes>
+                    <Route element={<ProtectedRoute/>}>
+                        <Route path={"/"} element={<Layout/>}>
+                            <Route index element={<Home/>}/>
+                            <Route path={"user"} element={<div>user</div>}/>
+                        </Route>
+                    </Route>
                     {/*  START -- All the register steps  */}
                     <Route exact path={"/login"} element={<Login/>}/>
                     <Route exact path={"/register"} element={<Register/>}/>
                     <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
                     {/*  END -- All the register steps  */}
-                    <Route element={<ProtectedRoute/>}>
-                        <Route path={"/home"} element={<SideWrapper/>}>
-                            <Route exact path={"user"} element={<h1>user</h1>}/>
-                        </Route>
-                        <Route exact index path={"/"}/>
-                    </Route>
                 </Routes>
             </BrowserRouter>
         </div>

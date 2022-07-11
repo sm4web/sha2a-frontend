@@ -11,12 +11,13 @@ import {
     LoginFormTitle,
     LoginStyle,
     LoginSubmitButton,
+    Register__AlreadyHaveAccount,
     SideImage as SideImageStyle
 } from "./style";
 import GoogleAuth from "../../features/googleAuth/googleAuth";
 import {createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../firebase";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {signIn} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
@@ -60,6 +61,9 @@ const Register = () => {
                                 <InputHandler placeholder={"Write your Password."} name={"password"}
                                               label={"Password"} type={"password"}/>
                                 <Button type={"submit"} sx={LoginSubmitButton}>Sign up</Button>
+                                <Typography variant={"h3"} sx={Register__AlreadyHaveAccount}>Already have an
+                                    account? <Link
+                                        to={"/login"}>Sign in</Link></Typography>
                                 <GoogleAuth/>
                                 {error && <Alert severity="error">{error}</Alert>}
                             </Form>

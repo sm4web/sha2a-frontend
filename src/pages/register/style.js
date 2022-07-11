@@ -2,7 +2,7 @@ export const LoginStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: "calc(100vh - 90px)",
+    minHeight: "100vh",
     color: "#111"
 }
 
@@ -37,7 +37,7 @@ export const LoginFormContent = {
 
 export const LoginFormTitle = {
     fontSize: "32px",
-    color: "#2C4CC9",
+    color: "primary.main",
 }
 
 export const LoginFormMessage = {
@@ -45,17 +45,11 @@ export const LoginFormMessage = {
     color: "#111",
 }
 
-export const LoginForgotPassword = {
-    color: "#2c4cc9",
-    fontFamily: "GiloryMedium",
-    fontSize: "20px",
-    cursor: "pointer"
-}
 
 export const LoginSubmitButton = {
     border: "none",
     borderRadius: "8px",
-    bgcolor: "#2c4cc9",
+    bgcolor: "primary.main",
     width: "100%",
     height: "60px",
     color: "#fff",
@@ -64,3 +58,13 @@ export const LoginSubmitButton = {
     textTransform: "capitalize"
 }
 
+
+export const Register__AlreadyHaveAccount = {
+    color: "primary.dark",
+    fontSize: {md: "18px", xs: "12px"},
+    textAlign: "center",
+    a: {
+        textDecoration: "none",
+        color: "primary.main"
+    }
+}

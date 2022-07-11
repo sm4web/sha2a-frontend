@@ -4,6 +4,7 @@ import {Form, Formik} from 'formik'
 import InputHandler from "../../components/InputHandler";
 import {Alert, Box, Button, Divider, Typography} from "@mui/material";
 import {
+    Login__DontHaveAccount,
     LoginContainerStyle,
     LoginForgotPassword,
     LoginFormContent,
@@ -17,7 +18,7 @@ import {
 import GoogleAuth from "../../features/googleAuth/googleAuth";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../firebase";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {signIn} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
@@ -64,6 +65,8 @@ const Login = () => {
                                               label={"Password"} type={"password"}/>
                                 <Typography variant={"h3"} sx={LoginForgotPassword}>Forgot Password ?</Typography>
                                 <Button variant={"contained"} type={"submit"} sx={LoginSubmitButton}>Sign in</Button>
+                                <Typography variant={"h3"} sx={Login__DontHaveAccount}>Don't have an account? <Link
+                                    to={"/register"}>create account</Link></Typography>
                                 <Divider>OR</Divider>
                                 <GoogleAuth/>
                                 {error && <Alert severity="error">{error}</Alert>}
