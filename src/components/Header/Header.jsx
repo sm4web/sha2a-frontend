@@ -33,7 +33,6 @@ const Header = () => {
                     <MessageCircle color={"white"}/>
                     <div className={styles.header__userAvatar}>
                         <Avatar radius={"xl"}
-                                src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbY3v1BLGcs377egpKrACqT0K_-6o_ldiWA&usqp=CAU"}
                                 alt={"it's me"}/>
                         <h3>
                             Saif Mohamed
