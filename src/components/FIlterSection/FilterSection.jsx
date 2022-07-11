@@ -22,14 +22,14 @@ const SearchBar = () => {
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
-                            <img src={images.searchIcon} width={32} height={32}
+                            <img src={images.searchIcon} width={26} height={26}
                                  alt="Search Icon"/>
                         </InputAdornment>
                     ),
                     endAdornment: (
                         <InputAdornment position="end">
-                            {/*<img src={images.clearIcon} width={32} height={32}*/}
-                            {/*     alt="Clear Icon"/>*/}
+                            <img src={images.clearIcon} width={32} height={32}
+                                 alt="Clear Icon"/>
                         </InputAdornment>
                     ),
                 }}
@@ -44,14 +44,14 @@ const SearchBar = () => {
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
-                            {/*<img src={images.locationIcon} width={32} height={32}*/}
-                            {/*     alt="Search Icon"/>*/}
+                            <img src={images.locationIcon} width={32} height={32}
+                                 alt="Search Icon"/>
                         </InputAdornment>
                     ),
                     endAdornment: (
                         <InputAdornment position="end">
-                            {/*<img src={images.clearIcon} width={32} height={32}*/}
-                            {/*     alt="Clear Icon"/>*/}
+                            <img src={images.clearIcon} width={32} height={32}
+                                 alt="Clear Icon"/>
                         </InputAdornment>
                     ),
                 }}

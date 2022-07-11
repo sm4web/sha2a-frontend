@@ -4,8 +4,8 @@ import UploadProfilePic from "../assets/icons/upload-profile-picture.png";
 import SeekingIcon from "../assets/icons/seeking-icon.png";
 import OfferingIcon from "../assets/icons/offering-icon.png";
 import searchIcon from '../assets/icons/search-field-icon.png'
-
-
+import clearIcon from '../assets/icons/clearIcon.png'
+import locationIcon from '../assets/icons/location-icon.png'
 export default {
     signinHero,
     signupHero,
@@ -13,4 +13,6 @@ export default {
     UploadProfilePic,
     SeekingIcon,
     OfferingIcon,
+    locationIcon,
+    clearIcon
 };
