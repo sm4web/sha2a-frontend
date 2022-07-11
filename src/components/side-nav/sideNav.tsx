@@ -7,6 +7,14 @@ import {signOut} from '../../features/user/userSlice'
 const useStyles = createStyles((theme) => ({
     navbar: {
         backgroundColor: "#0B0E16",
+        borderRadius: "10px",
+        margin: '12px',
+        height: "calc(100vh - 120px)",
+        position: "fixed",
+        display: "flex",
+        alignItems: "center",
+        border: "none",
+        justifyContent: "center",
         [`@media (max-width: ${theme.breakpoints.md}px)`]: {
             // Type safe child reference in nested selectors via ref
             display: "none"
@@ -81,7 +89,7 @@ const SideNav = () => {
     ));
 
     return (
-        <Navbar className={classes.navbar} height={"100vh"} width={{base: 100}} p="sm">
+        <Navbar className={classes.navbar} width={{base: 80}} p="xl">
             <Navbar.Section grow mt={50}>
                 <Group direction="column" align="center" spacing={60}>
                     {links}

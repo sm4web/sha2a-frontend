@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ad-card/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ads-results/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/side-nav/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/demo-ad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/demo-ad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FIlterSection/FilterSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filter-section/FilterSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FIlterSection/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filter-section/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InputHandler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input-handler/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stepper/Stepper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stepper/Stepper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stepper/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stepper/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/handleAuth/protectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/protected-routes/protectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/personalInfoForm/personalInfoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/personal-info-form/personalInfoForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/personalInfoForm/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/personal-info-form/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/priceSlider/priceSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/price-slider/priceSlider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/priceSlider/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/price-slider/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reverseAuth/reverseProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/unprotected-routes/reverseProtectedRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideNav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sideNav/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ad-card/adCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sortingBar/sortingBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sorting-bar/sortingBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sortingBar/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sorting-bar/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/uploadPicture/UploadPicture.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload-profile-picture/UploadPicture.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/uploadPicture/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/upload-profile-picture/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userTypeForm/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-type-form/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userTypeForm/userTypeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-type-form/userTypeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/completeRegister/completeRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/completeRegister/completeRegister.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +80,7 @@
       <workItem from="1657268701877" duration="13383000" />
       <workItem from="1657527922663" duration="2523000" />
       <workItem from="1657531652545" duration="12735000" />
-      <workItem from="1657552317297" duration="4247000" />
+      <workItem from="1657552317297" duration="5789000" />
     </task>
     <servers />
   </component>

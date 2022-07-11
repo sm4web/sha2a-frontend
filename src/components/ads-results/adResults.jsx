@@ -5,7 +5,7 @@ import AdCard from "../ad-card/adCard";
 const AdResults = () => {
     return (
         <Grid container spacing={4}>
-            {[1, 2, 3].map(card => (
+            {Array(10).fill().map(card => (
                 <Grid item xs={12} md={6} lg={4}>
                     <AdCard/>
                 </Grid>

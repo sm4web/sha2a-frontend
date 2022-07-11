@@ -14,9 +14,12 @@ const Layout = () => {
     return (
         <div>
             <Header/>
-            <div style={{display: "flex"}}>
+
+            <div>
                 <SideNav/>
-                <Outlet/>
+                <div style={{marginLeft: "100px"}}>
+                    <Outlet/>
+                </div>
             </div>
         </div>
     );
@@ -25,19 +28,26 @@ const Layout = () => {
 function App() {
     return (
         <div className="App">
+            <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5117302971351802"
+                    crossOrigin="anonymous"></script>
+
             <BrowserRouter>
                 <Routes>
+
                     <Route element={<ProtectedRoute/>}>
                         <Route path={"/"} element={<Layout/>}>
                             <Route index element={<Home/>}/>
                             <Route path={"user"} element={<div>user</div>}/>
                         </Route>
                     </Route>
+
                     {/*  START -- All the register steps  */}
                     <Route exact path={"/login"} element={<Login/>}/>
                     <Route exact path={"/register"} element={<Register/>}/>
                     <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
                     {/*  END -- All the register steps  */}
+
                 </Routes>
             </BrowserRouter>
         </div>
