@@ -58,7 +58,7 @@ export const NormalInputStyle = {
         borderRadius: "8px",
         border: "none",
         "& fieldset": {
-            boxShadow: "0px 3px 14px rgba(0, 0, 0, 0.09)",
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
             borderRadius: "10px",
             border: "none",
         },

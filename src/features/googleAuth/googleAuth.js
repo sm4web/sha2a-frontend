@@ -4,7 +4,6 @@ import GoogleSignin from "../../assets/images/google-logo.png";
 import {GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
 import {auth} from "../../firebase";
 import {useDispatch} from "react-redux";
-import {signIn} from "../user/userSlice";
 import {useNavigate} from "react-router-dom";
 
 
@@ -14,7 +13,6 @@ const GoogleAuth = () => {
     const onLogin = () => {
         const provider = new GoogleAuthProvider()
         signInWithPopup(auth, provider).then(userData => {
-            dispatch(signIn(userData?.user))
             router('/personal-info?step=2')
         }).catch(err => {
             console.log(err)

@@ -2,40 +2,64 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import sha2a from "../../API/axios";
 
 const initialState = {
-    loggedIn: true, data: null, isLoading: false, error: ""
+    loggedIn: true, data: null, isLoading: false
 };
 
 export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
+    return sha2a.post('/login/', values).then((response) => {
+        return response.data?.data
+    }).catch((error) => {
+        return {errorMessage: error.response.statusText}
+    })
+})
 
-    const res = await sha2a.post('/login', values)
-    console.log(res)
-
+export const userRegister = createAsyncThunk('user/userRegister', async (values) => {
+    return sha2a.post('/register/', values).then((response) => {
+        return response.data?.data
+    }).catch((error) => {
+        return {errorMessage: error.response.statusText}
+    })
 })
 
 export const userSlice = createSlice({
 
     name: 'user', initialState, reducers: {
-        signIn: (state, action) => {
-            state.data = action.payload
-            state.loggedIn = true
-        }, signOut: (state) => {
+
+        signOut: (state) => {
             state.data = null;
             state.loggedIn = false;
         }
+
     }, extraReducers: {
         [userLogin.pending]: (state) => {
             state.isLoading = true
+
         }, [userLogin.fulfilled]: (state, action) => {
             state.isLoading = false
             state.data = action.payload
+
         }, [userLogin.rejected]: (state, action) => {
+            state.isLoading = false
+            state.error = action.payload
+        },
+
+        // register
+        [userRegister.pending]: (state) => {
+            state.isLoading = true
+
+        }, [userRegister.fulfilled]: (state, action) => {
+            state.isLoading = false
+            state.data = action.payload
+            state.loggedIn = true
+
+        }, [userRegister.rejected]: (state, action) => {
             state.isLoading = false
             state.error = action.payload
         },
     }
 });
 
-export const {signIn, signOut} = userSlice.actions;
+export const {signOut} = userSlice.actions;
 
 
 export default userSlice.reducer;

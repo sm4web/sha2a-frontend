@@ -15,11 +15,9 @@ import {
     SideImage as SideImageStyle
 } from "./style";
 import GoogleAuth from "../../features/googleAuth/googleAuth";
-import {createUserWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../firebase";
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {signIn} from "../../features/user/userSlice";
+import {userRegister} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
 
 
@@ -29,17 +27,8 @@ const Register = () => {
     const dispatch = useDispatch()
 
     const onSignUp = (values) => {
-        createUserWithEmailAndPassword(auth, values.email, values.password).then(userData => {
-            console.log(userData)
-            dispatch(signIn(userData?.user))
-            if (userData?.user) {
-                router('/home')
-            }
-        }).catch(err => {
-            const newMessage = err?.message
-            setError(newMessage)
-
-        })
+        dispatch(userRegister(values))
+        router('/personal-info?step=2')
     }
     return (
         <Box sx={LoginStyle}>
@@ -48,7 +37,7 @@ const Register = () => {
                     <img src={SideImage} alt="Sign in to Sha2a - Real E-state Platform"/>
                 </Box>
                 <Box sx={LoginFormStyle}>
-                    <Formik validationSchema={accountSchema} initialValues={{email: "", password: ""}}
+                    <Formik validationSchema={accountSchema} initialValues={{email: "", password: "", phone: ""}}
                             onSubmit={(values) => {
                                 onSignUp(values)
                             }}>
@@ -58,6 +47,9 @@ const Register = () => {
                                 <Typography variant={"h3"} sx={LoginFormMessage}>Fill the Fields to
                                     create an account</Typography>
                                 <InputHandler placeholder={"Write your email."} name={"email"} label={"Email"}/>
+                                <InputHandler placeholder={"Write your phone number."} name={"phone"}
+                                              label={"Phone Number"} type={"tel"}
+                                />
                                 <InputHandler placeholder={"Write your Password."} name={"password"}
                                               label={"Password"} type={"password"}/>
                                 <Button type={"submit"} sx={LoginSubmitButton}>Sign up</Button>

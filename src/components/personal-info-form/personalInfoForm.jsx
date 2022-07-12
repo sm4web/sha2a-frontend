@@ -29,8 +29,8 @@ const PersonalInfoForm = () => {
                 {({values}) => (<Form style={PInfoFormContent}>
                     <UploadPicture name={"image"}/>
                     <InputHandler name={"username"} label={"User Name"} placeholder={"Enter your User Name"}/>
-                    <InputHandler name={"phone_number"} label={"Phone Number"}
-                                  placeholder={"Enter your Phone Number"}/>
+                    {/*<InputHandler name={"phone_number"} label={"Phone Number"}*/}
+                    {/*              placeholder={"Enter your Phone Number"}/>*/}
                     <Box>
                         <Typography variant="h1" sx={{fontSize: {lg: "20px", xs: "16px"}, fontFamily: "GiloryMedium"}}>
                             Country

@@ -9,14 +9,13 @@ const useStyles = createStyles((theme) => ({
         backgroundColor: "#0B0E16",
         borderRadius: "10px",
         margin: '8px',
-        height: "calc(100vh - 120px)",
+        height: "calc(100vh - 110px)",
         position: "fixed",
         display: "flex",
         alignItems: "center",
         border: "none",
         justifyContent: "center",
         [`@media (max-width: ${theme.breakpoints.md}px)`]: {
-            // Type safe child reference in nested selectors via ref
             display: "none"
         },
     },

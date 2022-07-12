@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SideImage from '../../assets/images/signin-side.svg'
 import {Form, Formik} from 'formik'
 import InputHandler from "../../components/input-handler";
@@ -17,20 +17,20 @@ import {
 } from "./style";
 import GoogleAuth from "../../features/googleAuth/googleAuth";
 import {Link, useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {userLogin} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
 
 
 const Login = () => {
 
-    const [error, setError] = useState(null)
+    const error = useSelector(state => state.user.data?.errorMessage)
     const router = useNavigate()
     const dispatch = useDispatch()
 
     const onSignIn = (values) => {
         dispatch(userLogin(values))
-        // router('/')
+        router('/')
     }
 
 

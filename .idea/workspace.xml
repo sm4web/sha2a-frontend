@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/ad-card/adCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ad-card/adCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ad-card/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ad-card/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input-handler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input-handler/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/personal-info-form/personalInfoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/personal-info-form/personalInfoForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/googleAuth/googleAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/user/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validations/accountSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/accountSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +94,7 @@
       <workItem from="1657527922663" duration="2523000" />
       <workItem from="1657531652545" duration="12735000" />
       <workItem from="1657552317297" duration="7751000" />
-      <workItem from="1657609734839" duration="5236000" />
+      <workItem from="1657609734839" duration="15062000" />
     </task>
     <servers />
   </component>
