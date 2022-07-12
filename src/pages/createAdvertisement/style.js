@@ -15,11 +15,13 @@ export const CreateAd__ToggleGroup = {
         borderRadius: "10px",
         border: "none",
         mr: 2,
-        fontSize: {md: "18px", xs: "14px"},
-        textTransform:"capitalize",
+        fontSize: {md: "18px", xs: "12px"},
+        textTransform: "capitalize",
+        padding: "12px",
+        boxSizing: "border-box",
         fontFamily: "GiloryBold",
         transition: "all ease-in-out 0.2s",
-        "&.Mui-selected": {
+        "&.Mui-selected, &.Mui-focused": {
             backgroundColor: "primary.main",
             color: "#fff",
         }
