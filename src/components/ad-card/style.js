@@ -32,3 +32,21 @@ export const Card__Options = {
     alignItems: 'center',
     gap: {md: "24px", xs: "12px"}
 }
+
+export const Card__Title = {
+    mt: 4,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "16px",
+    h2: {
+        fontSize: "20px",
+        fontFamily: "GiloryBold",
+        color: "primary.dark"
+    },
+    h3: {
+        fontSize: "16px",
+        fontFamily: "GiloryMedium",
+        color: "rgba(0,0,0,0.7)"
+    }
+}

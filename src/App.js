@@ -8,6 +8,7 @@ import Register from "./pages/register/register";
 import CompleteRegister from "./pages/completeRegister/completeRegister";
 import SideNav from "./components/side-nav/sideNav.tsx";
 import Home from "./pages/home/Home";
+import Box from "@mui/material/Box";
 
 
 const Layout = () => {
@@ -17,9 +18,9 @@ const Layout = () => {
 
             <div>
                 <SideNav/>
-                <div style={{marginLeft: "100px"}}>
+                <Box sx={{ml: {md: "calc(80px + 16px)", xs: "0"}}}>
                     <Outlet/>
-                </div>
+                </Box>
             </div>
         </div>
     );

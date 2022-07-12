@@ -5,18 +5,10 @@ const initialState = {
     loggedIn: true, data: null, isLoading: false, error: ""
 };
 
-export const userLogin = createAsyncThunk('user/userLogin', () => {
+export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
 
-    try {
-
-        const response = sha2a.get('')
-        return response
-
-    } catch (error) {
-
-        return error.response.data.message
-
-    }
+    const res = await sha2a.post('/login', values)
+    console.log(res)
 
 })
 

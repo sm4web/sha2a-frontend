@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
     navbar: {
         backgroundColor: "#0B0E16",
         borderRadius: "10px",
-        margin: '12px',
+        margin: '8px',
         height: "calc(100vh - 120px)",
         position: "fixed",
         display: "flex",

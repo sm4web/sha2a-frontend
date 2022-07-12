@@ -1,12 +1,12 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import {Card, Card__Image, Card__Options, Card__Pricing} from "./style";
+import {Card, Card__Image, Card__Options, Card__Pricing, Card__Title} from "./style";
 import {images} from "../../constants";
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShareIcon from '@mui/icons-material/Share';
 
-const AdCard = () => {
+const AdCard = ({title, price, liked, address, bedrooms, bathrooms, area}) => {
     return (
         <Box sx={Card}>
             <img style={Card__Image} src={images.adImageDemo} alt="Advertisement at Sha2a Real Estate"/>
@@ -20,8 +20,12 @@ const AdCard = () => {
                     <ShareIcon
                         sx={{color: "primary.main", fontSize: "32px"}}
                     />
-
                 </Box>
+            </Box>
+            <Box sx={Card__Title}>
+                <h2>New vintage apartment
+                    on the Green Avenue</h2>
+                <h3>329 Ambarukmo St, Brooklyn, NY</h3>
             </Box>
         </Box>
     );

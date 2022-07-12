@@ -1,6 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "",
-
+    baseURL: "https://sha2a-olx.herokuapp.com/user",
 })

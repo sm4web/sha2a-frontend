@@ -16,11 +16,9 @@ import {
     SideImage as SideImageStyle
 } from "./style";
 import GoogleAuth from "../../features/googleAuth/googleAuth";
-import {signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../firebase";
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {signIn} from "../../features/user/userSlice";
+import {userLogin} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
 
 
@@ -31,16 +29,8 @@ const Login = () => {
     const dispatch = useDispatch()
 
     const onSignIn = (values) => {
-        signInWithEmailAndPassword(auth, values.email, values.password).then(userData => {
-            dispatch(signIn(userData?.user))
-            if (userData?.user) {
-                router('/personal-info?step=2')
-            }
-        }).catch(err => {
-            const newMessage = err?.message
-            setError(newMessage)
-
-        })
+        dispatch(userLogin(values))
+        // router('/')
     }
 
 
