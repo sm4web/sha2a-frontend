@@ -9,6 +9,7 @@ import CompleteRegister from "./pages/completeRegister/completeRegister";
 import SideNav from "./components/side-nav/sideNav.tsx";
 import Home from "./pages/home/Home";
 import Box from "@mui/material/Box";
+import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
 
 
 const Layout = () => {
@@ -39,7 +40,7 @@ function App() {
                     <Route element={<ProtectedRoute/>}>
                         <Route path={"/"} element={<Layout/>}>
                             <Route index element={<Home/>}/>
-                            <Route path={"user"} element={<div>user</div>}/>
+                            <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
                         </Route>
                     </Route>
 
