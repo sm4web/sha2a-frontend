@@ -9,6 +9,7 @@ import StraightenIcon from '@mui/icons-material/Straighten';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShareIcon from '@mui/icons-material/Share';
+import {Grid} from "@mui/material";
 
 const AdCard = ({title, price, liked, address, bedrooms, bathrooms, area}) => {
     return (
@@ -35,18 +36,30 @@ const AdCard = ({title, price, liked, address, bedrooms, bathrooms, area}) => {
             </Box>
 
             <Box sx={Card__Features}>
-                <Box sx={Card__Feature}>
-                    <KingBedIcon/>
-                    <h3>2 Bedrooms</h3>
-                </Box>
-                <Box sx={Card__Feature}>
-                    <BathtubIcon/>
-                    <h3>2 Bedrooms</h3>
-                </Box>
-                <Box sx={Card__Feature}>
-                    <StraightenIcon/>
-                    <h3>2 Bedrooms</h3>
-                </Box>
+                <Grid container spacing={2}>
+                    <Grid item lg={4} md={6} xs={6}>
+                        <Box sx={Card__Feature}>
+                            <KingBedIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                    <Grid item lg={4} md={6} xs={6}>
+                        <Box sx={Card__Feature}>
+                            <BathtubIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                    <Grid item lg={4} md={6} xs={6}>
+                        <Box sx={Card__Feature}>
+                            <StraightenIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                </Grid>
+
             </Box>
         </Box>
     );

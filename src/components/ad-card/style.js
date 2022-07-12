@@ -1,5 +1,9 @@
 export const Card = {
-    width: "100%", padding: 4, borderRadius: "10px", boxShadow: "0px 4px 12px rgba(0,0,0,0.1)", height: "100%"
+    width: {md: "90%", xs: "100%"},
+    padding: 4,
+    borderRadius: "10px",
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+    height: "100%"
 }
 
 export const Card__Image = {
@@ -32,18 +36,14 @@ export const Card__Title = {
 }
 
 export const Card__Features = {
-    mt: 4, display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%",
+    mt: 4,
+    width: "100%",
 }
 
 export const Card__Feature = {
-    userSelect: "none",
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    h3: {
+    userSelect: "none", display: "flex", alignItems: "center", gap: "12px", h3: {
         fontSize: "16px", fontFamily: "GiloryMedium", color: "primary.gray"
-    },
-    svg: {
+    }, svg: {
         color: "primary.dark"
     }
 }
