@@ -7,28 +7,29 @@ import InputHandler from "../input-handler";
 import {useSearchParams} from "react-router-dom";
 import personalInfoSchema from "../../validations/personalInfoSchema";
 import {CountryDropdown, RegionDropdown} from "react-country-region-selector";
+import {useDispatch} from "react-redux";
+import {userUpdate} from "../../features/user/userSlice";
 
 
-const initValues = {username: "", image: "", phone_number: ''}
+const initValues = {name: "", profile_photo: ""}
 
 const PersonalInfoForm = () => {
     const [step, setStep] = useSearchParams()
     const [country, setCountry] = useState('')
     const [region, setRegion] = useState('')
-
-    const onNextStep = () => {
-        setStep({step: 3})
+    const dispatch = useDispatch()
+    const onNextStep = (values) => {
+        dispatch(userUpdate(values))
+        // setStep({step: 3})
     }
-
     return (<Box sx={PInfoStyle}>
         <Box sx={PInfoForm}>
             <Formik validationSchema={personalInfoSchema} initialValues={initValues} onSubmit={(values) => {
-                console.log(values)
-                onNextStep()
+                onNextStep(values)
             }}>
                 {({values}) => (<Form style={PInfoFormContent}>
-                    <UploadPicture name={"image"}/>
-                    <InputHandler name={"username"} label={"User Name"} placeholder={"Enter your User Name"}/>
+                    <UploadPicture name={"profile_photo"}/>
+                    <InputHandler name={"name"} label={"User Name"} placeholder={"Enter your User Name"}/>
                     {/*<InputHandler name={"phone_number"} label={"Phone Number"}*/}
                     {/*              placeholder={"Enter your Phone Number"}/>*/}
                     <Box>
@@ -53,7 +54,7 @@ const PersonalInfoForm = () => {
                             style={PInfoCustomDropDown}
                             onChange={(value) => {
                                 setRegion(value)
-                                values.region = value
+                                values.city = value
                             }}/>
                     </Box>
                     <Button type={"submit"} sx={PInfoSubmitButton} variant={"contained"}>

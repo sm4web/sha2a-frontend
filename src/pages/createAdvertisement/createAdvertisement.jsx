@@ -5,9 +5,14 @@ import Typography from "@mui/material/Typography";
 import {ToggleButton, ToggleButtonGroup} from "@mui/material";
 
 const CreateAdvertisement = () => {
-    return (<Box sx={CreateAd}>
-        <AdType/>
-    </Box>);
+    return (
+        <Box sx={CreateAd}>
+            <AdType/>
+            <Box>
+
+            </Box>
+        </Box>
+    );
 };
 
 

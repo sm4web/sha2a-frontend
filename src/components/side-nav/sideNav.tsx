@@ -88,7 +88,7 @@ const SideNav = () => {
     ));
 
     return (
-        <Navbar className={classes.navbar} width={{base: 80}} p="xl">
+        <Navbar className={classes.navbar} width={{base: 70}} p="xl">
             <Navbar.Section grow mt={50}>
                 <Group direction="column" align="center" spacing={60}>
                     {links}

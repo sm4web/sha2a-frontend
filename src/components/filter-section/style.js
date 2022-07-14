@@ -13,17 +13,15 @@ export const Divider = {minHeight: "60px", width: '2px', bgcolor: "primary.main"
 export const FilterBarFieldStyle = {
     "& .MuiOutlinedInput-root": {
         background: "transparent",
-        height: {lg: "55px", md: "50px", xs: "45px"},
+        height: "100%",
         width: "100%",
         fontSize: {lg: "20px", xs: "18px"},
         fontFamily: "GilorySemiBold",
         color: "#0B0E16",
         padding: "0 16px",
-        borderRadius: "8px",
         border: "none",
         "& fieldset": {
-            boxShadow: "none",
-            border: "none",
+            boxShadow: "none", border: "none",
         },
         "&.Mui-focused fieldset": {
             border: "none"
@@ -32,11 +30,9 @@ export const FilterBarFieldStyle = {
 };
 
 export const FilterContainer = {
-    width: "100%",
-    minHeight: "60px",
-    p: 2,
+    width: "100%", // minHeight: "60px",
     bgcolor: "white",
-    borderRadius: {md: "100px", xs: "10px"},
+    borderRadius: "10px",
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
     justifyContent: "space-between",
@@ -57,16 +53,14 @@ export const FilteringSelectorsContainer = {
 export const FilterSubmitButton = {
     color: "white",
     bgcolor: "primary.main",
-    height: {lg: "55px", md: "50px", xs: "45px"},
     fontSize: {md: "18px", xs: "16px"},
     fontFamily: "GiloryBold",
     textTransform: "capitalize",
     fontWeight: "500",
-    borderRadius: "100px",
+    borderRadius: "10px",
     boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
 
     "&:hover": {
-        color: "primary.main",
-        bgcolor: "white",
+        color: "primary.main", bgcolor: "white",
     },
 };

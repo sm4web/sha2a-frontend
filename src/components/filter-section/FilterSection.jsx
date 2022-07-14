@@ -59,7 +59,8 @@ const SearchBar = () => {
                 name={"location"}
                 placeholder={"Find Your Place"}
             />
-
+            <Box sx={Divider}>
+            </Box>
             <Button sx={{...FilterSubmitButton, width: "250px"}} type={"submit"} variant={"contained"}>
                 SEARCH
             </Button>

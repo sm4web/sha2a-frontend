@@ -12,28 +12,9 @@ import Box from "@mui/material/Box";
 import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
 
 
-const Layout = () => {
-    return (
-        <div>
-            <Header/>
-
-            <div>
-                <SideNav/>
-                <Box sx={{ml: {md: "calc(80px + 16px)", xs: "0"}}}>
-                    <Outlet/>
-                </Box>
-            </div>
-        </div>
-    );
-}
-
 function App() {
     return (
         <div className="App">
-            <script async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5117302971351802"
-                    crossOrigin="anonymous"></script>
-
             <BrowserRouter>
                 <Routes>
 
@@ -55,5 +36,22 @@ function App() {
         </div>
     );
 }
+
+
+const Layout = () => {
+    return (
+        <div>
+            <Header/>
+
+            <div>
+                <SideNav/>
+                <Box sx={{ml: {md: "calc(60px + 16px)", xs: "0"}}}>
+                    <Outlet/>
+                </Box>
+            </div>
+        </div>
+    );
+}
+
 
 export default App;

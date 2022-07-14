@@ -7,7 +7,7 @@ const initialState = {
 
 export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
     return sha2a.post('/login/', values).then((response) => {
-        return response.data?.data
+        return response.data
     }).catch((error) => {
         return {errorMessage: error.response.statusText}
     })
@@ -15,12 +15,24 @@ export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
 
 export const userRegister = createAsyncThunk('user/userRegister', async (values) => {
     return sha2a.post('/register/', values).then((response) => {
-        return response.data?.data
+        return response.data
     }).catch((error) => {
         return {errorMessage: error.response.statusText}
     })
 })
 
+export const userUpdate = createAsyncThunk('user/userUpdate', async (values, thunkAPI) => {
+
+    return sha2a.put(`/profile/19/`, values, {
+        headers: {
+            authorization: `Bearer ${thunkAPI.getState().user.data?.access}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        return {errorMessage: error.response.statusText}
+    })
+})
 export const userSlice = createSlice({
 
     name: 'user', initialState, reducers: {
@@ -37,6 +49,7 @@ export const userSlice = createSlice({
         }, [userLogin.fulfilled]: (state, action) => {
             state.isLoading = false
             state.data = action.payload
+            state.loggedIn = true;
 
         }, [userLogin.rejected]: (state, action) => {
             state.isLoading = false
@@ -53,6 +66,19 @@ export const userSlice = createSlice({
             state.loggedIn = true
 
         }, [userRegister.rejected]: (state, action) => {
+            state.isLoading = false
+            state.error = action.payload
+        },
+
+        [userUpdate.pending]: (state) => {
+            state.isLoading = true
+
+        }, [userUpdate.fulfilled]: (state, action) => {
+            state.isLoading = false
+            state.data = action.payload
+            state.loggedIn = true
+
+        }, [userUpdate.rejected]: (state, action) => {
             state.isLoading = false
             state.error = action.payload
         },
