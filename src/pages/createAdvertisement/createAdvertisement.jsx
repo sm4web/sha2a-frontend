@@ -11,7 +11,7 @@ const CreateAdvertisement = () => {
         <Box sx={CreateAd}>
             <Formik onSubmit={(values) => {
                 console.log(values)
-            }} initialValues={{type: "", area: "", description: "", price: "", number_of_rooms:""}}>
+            }} initialValues={{type: "", area: "", description: "", price: "", number_of_rooms: ""}}>
                 {() => (
                     <Form>
                         <AdType name={"type"}/>
@@ -41,7 +41,7 @@ const CreateAdvertisement = () => {
 
                             {/* RIGHT SIDE*/}
                             <Box sx={CreateAd__SideContainer}>
-                               <GoogleMaps />
+                                <GoogleMaps/>
                             </Box>
 
                         </Box>
