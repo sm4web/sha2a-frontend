@@ -49,7 +49,7 @@ const InputHandler = ({label, ...props}) => {
 export const NormalInputStyle = {
     "& .MuiOutlinedInput-root": {
         background: "#fff",
-        height: {lg: "60px", md: "60px", xs: "45px"},
+        minHeight: {lg: "60px", md: "60px", xs: "45px"},
         width: "100%",
         fontSize: {lg: "16px", xs: "14px"},
         fontFamily: "GilorySemiBold",

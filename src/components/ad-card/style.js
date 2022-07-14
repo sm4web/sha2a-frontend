@@ -1,8 +1,8 @@
 export const Card = {
-    width: "100%",
-    padding: 4,
+    maxWidth: "520px",
+    padding: 2,
     borderRadius: "10px",
-    boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.15)",
     height: "100%"
 }
 

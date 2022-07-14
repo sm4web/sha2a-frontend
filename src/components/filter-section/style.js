@@ -1,5 +1,5 @@
 export const ContainerStyle = {
-    p: {md: `${4 * 8}px 5%`, xs: 2},
+    p: 2,
     bgcolor: "rgba(67,105,253,0.2)",
     display: "flex",
     flexDirection: "column",
@@ -59,7 +59,7 @@ export const FilterSubmitButton = {
     fontWeight: "500",
     borderRadius: "10px",
     boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
-
+    m: {md: 1, xs: 2},
     "&:hover": {
         color: "primary.main", bgcolor: "white",
     },
