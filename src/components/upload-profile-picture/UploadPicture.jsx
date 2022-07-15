@@ -7,12 +7,15 @@ import {ContainerStyle, LabelStyle, ProfilePicStyle} from "./style";
 const UploadPicture = ({name}) => {
     const formikProps = useFormikContext();
     const ref = useRef();
+
     const handleChange = () => {
         ref.current.click();
     };
+
     const handleImageLocally = (e) => {
         formikProps.setFieldValue(name, e.target.files[0]);
     };
+
     const handleRemoveImageLocally = () => {
         formikProps.setFieldValue(name, null);
     };

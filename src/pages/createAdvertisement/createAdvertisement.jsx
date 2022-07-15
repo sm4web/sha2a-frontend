@@ -5,6 +5,7 @@ import {ToggleButton, ToggleButtonGroup} from "@mui/material";
 import {Form, Formik, useFormikContext} from "formik";
 import InputHandler from "../../components/input-handler";
 import GoogleMaps from "../../components/google-map/googleMaps";
+import UploadImages from "../../components/upload-images/uploadImages";
 
 const CreateAdvertisement = () => {
     return (
@@ -14,14 +15,16 @@ const CreateAdvertisement = () => {
             }} initialValues={{
                 title: "",
                 type: "",
-                area: "",
+                area: 0,
                 description: "",
                 price: 0,
                 number_of_rooms: 0,
-                location: ""
+                location: "",
+                images: []
             }}>
-                {() => (
+                {({values}) => (
                     <Form>
+                        {console.log(values)}
                         <AdType name={"type"}/>
                         <Box sx={CreateAd__FormContainer}>
 
@@ -49,6 +52,7 @@ const CreateAdvertisement = () => {
                             {/* RIGHT SIDE*/}
                             <Box sx={CreateAd__SideContainer}>
                                 <GoogleMaps form_name={"location"}/>
+                                <UploadImages name={"images"}/>
                             </Box>
                         </Box>
                     </Form>
@@ -96,4 +100,6 @@ const AdType = ({name}) => {
         </Box>
     )
 }
+
+
 export default CreateAdvertisement;

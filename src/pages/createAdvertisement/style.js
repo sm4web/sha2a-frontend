@@ -10,11 +10,19 @@ export const CreateAd__FormContainer = {
     alignItems: "flex-start",
     justifyContent: "space-between",
     gap: {md: "5%", xs: "24px"},
-    width: "100%"
+    width: "100%",
+    height: "100%",
+    border:"1px solid red"
 }
 
 export const CreateAd__SideContainer = {
-    width: {md: "50%", xs: "100%"}, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "24px"
+    width: {md: "50%", xs: "100%"},
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    height: "100%",
+
 }
 
 export const ChooseType = {

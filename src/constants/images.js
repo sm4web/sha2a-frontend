@@ -7,11 +7,12 @@ import searchIcon from '../assets/icons/search-field-icon.png'
 import clearIcon from '../assets/icons/clearIcon.png'
 import locationIcon from '../assets/icons/location-icon.png'
 import adImageDemo from '../assets/images/demo-ad.png'
-
+import UploadImagesIcon from '../assets/icons/upload-images-icon.png'
 
 export default {
     signinHero,
     signupHero,
+    UploadImagesIcon,
     searchIcon,
     UploadProfilePic,
     SeekingIcon,
