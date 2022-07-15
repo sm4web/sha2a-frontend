@@ -7,28 +7,29 @@ export const CreateAd__FormContainer = {
     mt: 4,
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
-    alignItems: "flex-start",
-    justifyContent: "space-between",
+    // alignItems: "flex-start",
+    // justifyContent: "space-between",
     gap: {md: "5%", xs: "24px"},
     width: "100%",
     height: "100%",
-    border:"1px solid red"
 }
 
 export const CreateAd__SideContainer = {
     width: {md: "50%", xs: "100%"},
+    gap:"12px",
+    height: "available",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    height: "100%",
-
 }
 
 export const ChooseType = {
+
     h3: {
         fontSize: "20px", fontFamily: "GiloryMedium"
     }
+
 }
 
 export const ChooseType__ToggleGroup = {
