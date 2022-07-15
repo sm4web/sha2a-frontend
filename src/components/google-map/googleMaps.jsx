@@ -15,15 +15,15 @@ const GoogleMaps = ({form_name}) => {
         googleMapsApiKey: "AIzaSyBTgKas46Hnbj-hvCCVTU_PrdHxJ0Lyc7Q", libraries: libraries
     })
 
-    const [location, setLocation] = useState({lng: 0, lat: 0})
+    const [location, setLocation] = useState({lng: 31.2357, lat: 30.0444})
 
-    useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(function (position) {
-                setLocation({lat: position.coords.latitude, lng: position.coords.longitude})
-            });
-        }
-    }, [])
+
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.watchPosition(function (position) {
+    //         setLocation({lat: position.coords.latitude, lng: position.coords.longitude})
+    //     });
+    // }
+
 
     useEffect(() => {
         formikProps.setFieldValue(form_name, location)
@@ -33,23 +33,21 @@ const GoogleMaps = ({form_name}) => {
         return <div>Map cannot be loaded right now, sorry.</div>
     }
 
-    return isLoaded ?
-        <div style={{width: "100%"}}>
-            <p style={{fontSize: '20px', fontFamily: "GiloryMedium", marginBottom: "10px"}}>Address</p>
-            <PlacesAutoComplete setLocation={setLocation}/>
-            <GoogleMap zoom={15} center={location}
-                       mapContainerClassName={'map-container'}>
-                <Marker
-                    draggable
-                    onDragEnd={(pos) => {
-                        setLocation({lat: pos.latLng.lat(), lng: pos.latLng.lng()})
-                    }}
-                    position={location}
-                />
+    return isLoaded ? <div style={{width: "100%"}}>
+        <p style={{fontSize: '20px', fontFamily: "GiloryMedium", marginBottom: "10px"}}>Address</p>
+        <PlacesAutoComplete setLocation={setLocation}/>
+        <GoogleMap zoom={15} center={location}
+                   mapContainerClassName={'map-container'}>
+            <Marker
+                draggable
+                onDragEnd={(pos) => {
+                    setLocation({lat: pos.latLng.lat(), lng: pos.latLng.lng()})
+                }}
+                position={location}
+            />
 
-            </GoogleMap>
-        </div>
-        : "loading"
+        </GoogleMap>
+    </div> : "loading"
 };
 
 const PlacesAutoComplete = ({setLocation}) => {

@@ -4,8 +4,6 @@
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/google-map/googleMaps.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/google-map/googleMaps.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/google-map/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/google-map/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,8 @@
       <workItem from="1657552317297" duration="7751000" />
       <workItem from="1657609734839" duration="20372000" />
       <workItem from="1657728119952" duration="13075000" />
-      <workItem from="1657809940127" duration="4733000" />
+      <workItem from="1657809940127" duration="5891000" />
+      <workItem from="1657895721750" duration="159000" />
     </task>
     <servers />
   </component>
