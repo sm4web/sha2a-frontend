@@ -16,7 +16,7 @@ export const CreateAd__FormContainer = {
 
 export const CreateAd__SideContainer = {
     width: {md: "50%", xs: "100%"},
-    gap:"12px",
+    gap: {md: "12px", xs: "24px"},
     height: "available",
     display: "flex",
     flexDirection: "column",

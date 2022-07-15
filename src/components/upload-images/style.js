@@ -25,8 +25,9 @@ export const UploadImages__ImagesContainer = {
     padding: "12px 0",
 
     img: {
-        maxWidth: "320px",
-        maxHeight: "240px",
+        width: "300px",
+        height: "230px",
+        objectFit: "contain",
         borderRadius: "10px",
     }
 }
