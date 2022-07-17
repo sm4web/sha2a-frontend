@@ -15,7 +15,7 @@ import {useNavigate} from "react-router-dom";
 const AdCard = ({id, title, price, liked, address, bedrooms, bathrooms, area}) => {
     const router = useNavigate()
     return (
-        <Box sx={Card} onClick={() => router(`${id}`)}>
+        <Box sx={Card} onClick={() => router(`/advertisements/${id}`)}>
             <img style={Card__Image} src={images.adImageDemo} alt="Advertisement at Sha2a Real Estate"/>
             <Box sx={Card__Pricing}>
                 <h3>250,000 EGP</h3>

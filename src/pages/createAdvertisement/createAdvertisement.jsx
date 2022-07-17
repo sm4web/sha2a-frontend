@@ -39,7 +39,7 @@ const CreateAdvertisement = () => {
                                 <InputHandler label={"Title"} placeholder={"Enter Title"} name={"title"}/>
                                 <InputHandler label={"Description"}
                                               multiline
-                                              maxRows={4}
+                                              rows={4}
                                               placeholder={"Enter Description"}
                                               name={"description"}
                                 />

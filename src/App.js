@@ -10,6 +10,7 @@ import SideNav from "./components/side-nav/sideNav.tsx";
 import Home from "./pages/home/Home";
 import Box from "@mui/material/Box";
 import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
+import AdvertisementPage from "./pages/advertisementPage/advertisementPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                         <Route path={"/"} element={<Layout/>}>
                             <Route index element={<Home/>}/>
                             <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
+                            <Route path={"advertisements/:id"} element={<AdvertisementPage/>}/>
                         </Route>
                     </Route>
 
@@ -42,7 +44,6 @@ const Layout = () => {
     return (
         <div>
             <Header/>
-
             <div>
                 <SideNav/>
                 <Box sx={{ml: {md: "calc(60px + 16px)", xs: "0"}}}>

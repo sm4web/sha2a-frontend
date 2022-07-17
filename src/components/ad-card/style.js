@@ -2,8 +2,13 @@ export const Card = {
     maxWidth: "520px",
     padding: 2,
     borderRadius: "10px",
-    boxShadow: "0px 4px 12px rgba(0,0,0,0.15)",
-    height: "100%"
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.10)",
+    height: "100%",
+    cursor: "pointer",
+    transition: "all ease-in 0.2s",
+    "&:hover": {
+        boxShadow: "0px 4px 12px rgba(0,0,0,0.2)",
+    }
 }
 
 export const Card__Image = {

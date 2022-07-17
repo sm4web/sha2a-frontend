@@ -5,7 +5,6 @@ import {Helmet} from "react-helmet";
 import {useSelector} from "react-redux";
 import {MessageCircle} from 'tabler-icons-react';
 import {Avatar} from '@mantine/core';
-import {Typography} from "@mui/material";
 
 
 const Header = () => {
@@ -53,7 +52,7 @@ const Header = () => {
             </Helmet>
             <div className={styles.header__container}>
                 <div className={styles.header__logo}>
-                    <h3>LOGO</h3>
+                    <h3>شقه</h3>
                 </div>
 
                 <RenderOptions/>

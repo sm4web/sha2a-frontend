@@ -3,6 +3,7 @@ import {createStyles, Group, Navbar, Tooltip, UnstyledButton} from '@mantine/cor
 import {Ad, Heart, Home2, Icon as TablerIcon, Logout, Settings} from 'tabler-icons-react';
 import {useDispatch} from "react-redux";
 import {signOut} from '../../features/user/userSlice'
+import {useNavigate} from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
     navbar: {
@@ -62,17 +63,17 @@ function NavbarLink({icon: Icon, label, active, onClick}: NavbarLinkProps) {
 }
 
 const mockdata = [
-    {icon: Home2, label: 'Home'},
-    {icon: Heart, label: 'Favorites'},
-    {icon: Ad, label: 'My Ads'},
-    {icon: Settings, label: 'Settings'},
+    {icon: Home2, label: 'Home', href: "/"},
+    {icon: Heart, label: 'Favorites', href: "/favorites"},
+    {icon: Ad, label: 'My Ads', href: "/my-ads"},
+    {icon: Settings, label: 'Settings', href: "/settings"},
 ];
 
 const SideNav = () => {
     const [active, setActive] = useState(0);
     const {classes, cx} = useStyles();
     const dispatch = useDispatch()
-
+    const router = useNavigate()
     const onSignOut = () => {
         dispatch(signOut())
     }
@@ -83,7 +84,10 @@ const SideNav = () => {
             {...link}
             key={link.label}
             active={index === active}
-            onClick={() => setActive(index)}
+            onClick={() => {
+                setActive(index)
+                router(link.href)
+            }}
         />
     ));
 
