@@ -72,12 +72,17 @@
     width: 175px;
     height: 60px;
   }
+
+
 }
 
 .header__userOptions {
   display: flex;
   align-items: center;
   gap: 32px;
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 }
 
 .header__userAvatar {
