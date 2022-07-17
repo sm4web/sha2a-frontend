@@ -33,6 +33,7 @@ export const userUpdate = createAsyncThunk('user/userUpdate', async (values, thu
         return {errorMessage: error.response.statusText}
     })
 })
+
 export const userSlice = createSlice({
 
     name: 'user', initialState, reducers: {

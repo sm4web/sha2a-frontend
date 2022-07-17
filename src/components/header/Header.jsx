@@ -2,14 +2,17 @@ import React from 'react';
 import styles from './Header.module.scss'
 import {useNavigate} from "react-router-dom";
 import {Helmet} from "react-helmet";
-import {useSelector} from "react-redux";
-import {MessageCircle} from 'tabler-icons-react';
+import {useDispatch, useSelector} from "react-redux";
+import {Menu2 as MenuIcon, MessageCircle} from 'tabler-icons-react';
 import {Avatar} from '@mantine/core';
+import {IconButton} from "@mui/material";
+import {handleDrawer} from "../../features/drawer/drawerSlice";
 
 
 const Header = () => {
     const router = useNavigate()
     const loggedIn = useSelector(state => state.user.loggedIn)
+    const dispatch = useDispatch()
     const handleRoute = (event) => {
         const route = event.target.name
         router(`${route}`)
@@ -52,9 +55,13 @@ const Header = () => {
             </Helmet>
             <div className={styles.header__container}>
                 <div className={styles.header__logo}>
+                    <IconButton onClick={() => {
+                        dispatch(handleDrawer())
+                    }}>
+                        <MenuIcon size={"32px"} color={"white"}/>
+                    </IconButton>
                     <h3>شقه</h3>
                 </div>
-
                 <RenderOptions/>
             </div>
         </div>

@@ -1,40 +1,31 @@
 import {useState} from 'react';
-import {createStyles, Group, Navbar, Tooltip, UnstyledButton} from '@mantine/core';
+import {createStyles, Drawer, Group, Navbar, Tooltip, UnstyledButton, useMantineTheme} from '@mantine/core';
 import {Ad, Heart, Home2, Icon as TablerIcon, Logout, Settings} from 'tabler-icons-react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {signOut} from '../../features/user/userSlice'
 import {useNavigate} from "react-router-dom";
+import {handleDrawer} from '../../features/drawer/drawerSlice'
 
 const useStyles = createStyles((theme) => ({
     navbar: {
-        backgroundColor: "#0B0E16",
-        borderRadius: "10px",
-        margin: '8px',
-        height: "calc(100vh - 110px)",
-        position: "fixed",
-        display: "flex",
-        alignItems: "center",
-        border: "none",
-        justifyContent: "center",
-        [`@media (max-width: ${theme.breakpoints.md}px)`]: {
-            display: "none"
-        },
+        height: "fit-content",
+        marginTop: "120px",
     },
     link: {
         width: 50,
         height: 50,
+        boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
         borderRadius: theme.radius.md,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: "#fff",
+        color: "#2C4CC9",
         '&:hover': {
             color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
         },
 
     },
-
     active: {
         '&, &:hover': {
             backgroundColor: "#2C4CC9",
@@ -71,9 +62,12 @@ const mockdata = [
 
 const SideNav = () => {
     const [active, setActive] = useState(0);
+    const theme = useMantineTheme();
     const {classes, cx} = useStyles();
     const dispatch = useDispatch()
     const router = useNavigate()
+    const opened = useSelector((state) => state.drawer.opened)
+
     const onSignOut = () => {
         dispatch(signOut())
     }
@@ -92,18 +86,31 @@ const SideNav = () => {
     ));
 
     return (
-        <Navbar className={classes.navbar} width={{base: 70}} p="xl">
-            <Navbar.Section grow mt={50}>
-                <Group direction="column" align="center" spacing={60}>
-                    {links}
-                </Group>
-            </Navbar.Section>
-            <Navbar.Section>
-                <Group direction="column" align="center" spacing={0}>
-                    <NavbarLink onClick={onSignOut} icon={Logout} label="Logout"/>
-                </Group>
-            </Navbar.Section>
-        </Navbar>
+        <Drawer
+            overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
+            overlayOpacity={0.33}
+            overlayBlur={3}
+            opened={opened}
+            style={{flex: 1}}
+            aria-labelledby="drawer-title"
+            aria-describedby="drawer-body"
+            closeButtonLabel="Close drawer"
+            padding="xs"
+            size={100}
+            onClose={() => {
+                dispatch(handleDrawer())
+            }}
+        >
+            <Navbar className={classes.navbar}>
+                <Navbar.Section grow>
+                    <Group direction="column" align="center" spacing={60}>
+                        {links}
+                        <NavbarLink onClick={onSignOut} icon={Logout} label="Logout"/>
+                    </Group>
+                </Navbar.Section>
+            </Navbar>
+        </Drawer>
+
     );
 }
 
