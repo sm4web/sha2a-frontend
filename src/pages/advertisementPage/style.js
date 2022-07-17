@@ -6,7 +6,7 @@ export const AdPage = {
 
 export const AdPage__ImageBar = {
     width: "100%",
-    height: "320px",
+    height: {md: "320px", xs: "240px"},
     backgroundImage: `url(${Banner})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
