@@ -1,5 +1,5 @@
 export const Card = {
-    maxWidth: "520px",
+    maxWidth: {md:"520px"},
     padding: 2,
     borderRadius: "10px",
     boxShadow: "0px 4px 12px rgba(0,0,0,0.10)",

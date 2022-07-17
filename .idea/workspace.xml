@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/ad_banner.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ad-card/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ad-card/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/advertisementPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/advertisementPage/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,7 @@
       <workItem from="1657728119952" duration="13075000" />
       <workItem from="1657809940127" duration="5891000" />
       <workItem from="1657895721750" duration="7835000" />
-      <workItem from="1658049204174" duration="6821000" />
+      <workItem from="1658049204174" duration="8998000" />
     </task>
     <servers />
   </component>

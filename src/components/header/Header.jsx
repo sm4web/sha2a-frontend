@@ -60,7 +60,11 @@ const Header = () => {
                     }}>
                         <MenuIcon size={"32px"} color={"white"}/>
                     </IconButton>
-                    <h3>شقه</h3>
+                    <IconButton onClick={() => {
+                        router("/")
+                    }}>
+                        <h3 color={"#fff"}>شقه</h3>
+                    </IconButton>
                 </div>
                 <RenderOptions/>
             </div>
