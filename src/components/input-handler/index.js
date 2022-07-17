@@ -54,7 +54,8 @@ export const NormalInputStyle = {
         fontSize: {lg: "16px", xs: "14px"},
         fontFamily: "GilorySemiBold",
         color: "rgba(1,1,1,.9)",
-        padding: "0 16px",
+        padding: "6px 16px",
+        boxSizing: "border-box",
         borderRadius: "8px",
         border: "none",
         "& fieldset": {

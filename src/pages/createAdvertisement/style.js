@@ -7,8 +7,6 @@ export const CreateAd__FormContainer = {
     mt: 4,
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
-    // alignItems: "flex-start",
-    // justifyContent: "space-between",
     gap: {md: "5%", xs: "24px"},
     width: "100%",
     height: "100%",
@@ -52,4 +50,28 @@ export const ChooseType__ToggleGroup = {
             backgroundColor: "primary.main", color: "#fff",
         }
     }
+}
+
+export const CreateAd__SubmitButton = {
+    border: "none",
+    borderRadius: "8px",
+    bgcolor: "primary.main",
+    width: "100%",
+    height: {md: "50px", xs: "45px"},
+    color: "#fff",
+    fontSize: {md: "20px", xs: "16px"},
+    fontFamily: "GiloryMedium",
+    textTransform: "capitalize"
+}
+
+export const CreateAd__CancelButton = {
+    border: "2px solid #2C4CC9",
+    borderRadius: "8px",
+    bgcolor: "#fff",
+    width: "100%",
+    height: {md: "50px", xs: "45px"},
+    color: "primary.main",
+    fontSize: {md: "20px", xs: "16px"},
+    fontFamily: "GiloryMedium",
+    textTransform: "capitalize"
 }

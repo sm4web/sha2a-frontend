@@ -1,7 +1,15 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import {ChooseType, ChooseType__ToggleGroup, CreateAd, CreateAd__FormContainer, CreateAd__SideContainer} from "./style";
-import {ToggleButton, ToggleButtonGroup} from "@mui/material";
+import {
+    ChooseType,
+    ChooseType__ToggleGroup,
+    CreateAd,
+    CreateAd__CancelButton,
+    CreateAd__FormContainer,
+    CreateAd__SideContainer,
+    CreateAd__SubmitButton
+} from "./style";
+import {Button, ToggleButton, ToggleButtonGroup} from "@mui/material";
 import {Form, Formik, useFormikContext} from "formik";
 import InputHandler from "../../components/input-handler";
 import GoogleMaps from "../../components/google-map/googleMaps";
@@ -24,21 +32,20 @@ const CreateAdvertisement = () => {
             }}>
                 {({values}) => (
                     <Form>
-                        {console.log(values)}
                         <AdType name={"type"}/>
                         <Box sx={CreateAd__FormContainer}>
-
                             {/* LEFT SIDE*/}
                             <Box sx={CreateAd__SideContainer}>
                                 <InputHandler label={"Title"} placeholder={"Enter Title"} name={"title"}/>
                                 <InputHandler label={"Description"}
                                               multiline
-                                              rows={4}
+                                              maxRows={4}
                                               placeholder={"Enter Description"}
                                               name={"description"}
                                 />
 
-                                <InputHandler label={"House Area"} type={"number"} placeholder={"Enter Area ( sqft )"}
+                                <InputHandler label={"House Area"} type={"number"}
+                                              placeholder={"Enter Area ( sqft )"}
                                               name={"area"}/>
 
                                 <InputHandler label={"Price"} type={"number"} placeholder={"Enter Price ( EGP )"}
@@ -55,6 +62,17 @@ const CreateAdvertisement = () => {
                                 <UploadImages name={"images"}/>
                             </Box>
                         </Box>
+                        <Box sx={{
+                            width: {md: "50%", xs: "100%"},
+                            margin: "auto",
+                            p: 2,
+                            mt: 4,
+                            display: "flex",
+                            gap: "5%"
+                        }}>
+                            <Button sx={CreateAd__SubmitButton} type={"submit"}>Save</Button>
+                            <Button sx={CreateAd__CancelButton}>Cancel</Button>
+                        </Box>
                     </Form>
                 )}
             </Formik>
@@ -65,7 +83,7 @@ const CreateAdvertisement = () => {
 
 const AdType = ({name}) => {
 
-    const [alignment, setAlignment] = React.useState('rent');
+    const [alignment, setAlignment] = React.useState('');
 
     const formikProps = useFormikContext();
 

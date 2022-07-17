@@ -20,7 +20,7 @@ export const UploadImages__Header = {
 export const UploadImages__ImagesContainer = {
     display: "flex",
     alignItems: "center",
-    gap: "12px",
+    gap: {md: "12px", xs: "24px"},
     overflowX: "scroll",
     padding: "12px 0",
 
@@ -30,4 +30,5 @@ export const UploadImages__ImagesContainer = {
         objectFit: "contain",
         borderRadius: "10px",
     }
+
 }
