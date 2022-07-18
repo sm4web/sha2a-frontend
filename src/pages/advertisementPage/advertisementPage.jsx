@@ -12,6 +12,7 @@ import {
 } from "./style";
 import Typography from "@mui/material/Typography";
 import {images} from "../../constants";
+import {Avatar} from "@mantine/core";
 
 const AdvertisementPage = () => {
     return (
@@ -33,7 +34,7 @@ const AdvertisementPage = () => {
                             />
                         </Box>
                         <Box sx={AdPage__SellerInfo}>
-                            asd
+                            <Avatar size={100} src={""}/>
                         </Box>
                     </Box>
                 </Box>

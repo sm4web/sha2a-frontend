@@ -39,7 +39,7 @@ export const AdPage__AdInfoContainer = {
 
 export const AdPage__AdInfoHeader = {
     width: "100%",
-    maxHeight: "500px",
+    height: "420px",
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
     alignItems: {md: "center", xs: "flex-start"},
@@ -47,15 +47,20 @@ export const AdPage__AdInfoHeader = {
 }
 
 export const AdPage__AdInfoImage = {
-    width: {md: "50%", xs: "100%"},
+    width: {md: "75%", xs: "100%"},
     height: "100%",
-    objectFit: "cover",
-    borderRadius: "10px"
+    img: {
+        borderRadius: "10px",
+        objectFit: "cover",
+    }
 }
 
 export const AdPage__SellerInfo = {
     width: {md: "50%", xs: "100%"},
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
     height: "100%",
-    objectFit: "cover",
-    borderRadius: "10px"
+    bgcolor: "#F8F8FA",
+    borderRadius: "10px",
+    p: 2
+
 }
