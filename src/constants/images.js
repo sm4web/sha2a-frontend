@@ -8,12 +8,16 @@ import clearIcon from '../assets/icons/clearIcon.png'
 import locationIcon from '../assets/icons/location-icon.png'
 import adImageDemo from '../assets/images/demo-ad.png'
 import UploadImagesIcon from '../assets/icons/upload-images-icon.png'
+import phoneIcon from '../assets/icons/phone-icon.png'
+import chatIcon from '../assets/icons/chat-icon.png'
 
 export default {
     signinHero,
     signupHero,
     UploadImagesIcon,
+    chatIcon,
     searchIcon,
+    phoneIcon,
     UploadProfilePic,
     SeekingIcon,
     OfferingIcon,

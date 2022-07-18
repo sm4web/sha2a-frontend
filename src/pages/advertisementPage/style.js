@@ -28,8 +28,7 @@ export const AdPage__BreadCrmp = {
 
 
 export const AdPage__AdTitle = {
-    fontSize: {md: "40px", xs: "24px"},
-    fontFamily: "GiloryBold",
+    fontSize: {md: "40px", xs: "24px"}, fontFamily: "GiloryBold",
 
 }
 
@@ -39,7 +38,7 @@ export const AdPage__AdInfoContainer = {
 
 export const AdPage__AdInfoHeader = {
     width: "100%",
-    height: "420px",
+    height: "577px",
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
     alignItems: {md: "center", xs: "flex-start"},
@@ -47,20 +46,35 @@ export const AdPage__AdInfoHeader = {
 }
 
 export const AdPage__AdInfoImage = {
-    width: {md: "75%", xs: "100%"},
-    height: "100%",
-    img: {
-        borderRadius: "10px",
-        objectFit: "cover",
+    width: {md: "65%", xs: "100%"}, height: "100%", img: {
+        borderRadius: "10px", objectFit: "cover",
     }
 }
 
 export const AdPage__SellerInfo = {
-    width: {md: "50%", xs: "100%"},
+    width: {md: "35%", xs: "100%"},
     boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
-    height: "100%",
     bgcolor: "#F8F8FA",
     borderRadius: "10px",
-    p: 2
+    p: 2,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+
+
+}
+
+export const AdPage__SellerName = {
+    fontSize: {md: "28px", xs: "18px"},
+    fontFamily: "GilorySemiBold",
+    marginBottom: "12px",
+    color: "primary.dark"
+}
+
+export const AdPage__SellerType = {
+    fontSize: {md: "20px", xs: "16px"},
+    fontFamily: "GiloryMedium",
+    color: "#818181",
+    marginBottom: {md: "50px", xs: "32px"},
 
 }

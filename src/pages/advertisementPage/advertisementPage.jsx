@@ -8,11 +8,16 @@ import {
     AdPage__AdTitle,
     AdPage__BreadCrmp,
     AdPage__ImageBar,
-    AdPage__SellerInfo
+    AdPage__SellerInfo,
+    AdPage__SellerName,
+    AdPage__SellerType
 } from "./style";
 import Typography from "@mui/material/Typography";
 import {images} from "../../constants";
 import {Avatar} from "@mantine/core";
+import InputHandler from "../../components/input-handler";
+import {Form, Formik} from "formik";
+import {InputAdornment} from "@mui/material";
 
 const AdvertisementPage = () => {
     return (
@@ -34,7 +39,50 @@ const AdvertisementPage = () => {
                             />
                         </Box>
                         <Box sx={AdPage__SellerInfo}>
-                            <Avatar size={100} src={""}/>
+                            <Avatar size={64}
+                                    radius={'xl'}
+                                    style={{marginBottom: '32px'}}
+                                    src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbY3v1BLGcs377egpKrACqT0K_-6o_ldiWA&usqp=CAU"}
+                            />
+                            <Typography variant={"h1"} sx={AdPage__SellerName}>
+                                Mustafa Abdullah Khallaf
+                            </Typography>
+                            <Typography variant={"p"} sx={AdPage__SellerType}>
+                                Seller
+                            </Typography>
+                            <Formik initialValues={{phone: ""}}>
+                                {() => (
+                                    <Form style={{width: "100%", display:"flex", flexDirection:"column", gap:"24px"}}>
+                                        <InputHandler
+                                            fullWidth
+                                            InputProps={{
+                                                readOnly: true,
+                                                startAdornment: (
+                                                    <InputAdornment position="start">
+                                                        <img src={images.phoneIcon} width={20} alt=""/>
+                                                    </InputAdornment>
+                                                ),
+                                            }}
+                                            name={"phone"}
+                                            type={"tel"}
+                                            value={'01206944093'}
+                                        />
+                                        <InputHandler
+                                            fullWidth
+                                            InputProps={{
+                                                readOnly: true,
+                                                startAdornment: (
+                                                    <InputAdornment position="start">
+                                                        <img src={images.chatIcon} width={20} alt=""/>
+                                                    </InputAdornment>
+                                                ),
+                                            }}
+                                            name={"chat"}
+                                            value={'Chat With Seller'}
+                                        />
+                                    </Form>
+                                )}
+                            </Formik>
                         </Box>
                     </Box>
                 </Box>
