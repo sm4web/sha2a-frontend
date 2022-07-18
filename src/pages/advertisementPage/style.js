@@ -32,3 +32,30 @@ export const AdPage__AdTitle = {
     fontFamily: "GiloryBold",
 
 }
+
+export const AdPage__AdInfoContainer = {
+    width: "100%",
+}
+
+export const AdPage__AdInfoHeader = {
+    width: "100%",
+    maxHeight: "500px",
+    display: "flex",
+    flexDirection: {md: "row", xs: "column"},
+    alignItems: {md: "center", xs: "flex-start"},
+    gap: {md: "40px", xs: "24px"}
+}
+
+export const AdPage__AdInfoImage = {
+    width: {md: "50%", xs: "100%"},
+    height: "100%",
+    objectFit: "cover",
+    borderRadius: "10px"
+}
+
+export const AdPage__SellerInfo = {
+    width: {md: "50%", xs: "100%"},
+    height: "100%",
+    objectFit: "cover",
+    borderRadius: "10px"
+}

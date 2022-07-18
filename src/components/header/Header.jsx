@@ -55,11 +55,15 @@ const Header = () => {
             </Helmet>
             <div className={styles.header__container}>
                 <div className={styles.header__logo}>
-                    <IconButton onClick={() => {
-                        dispatch(handleDrawer())
-                    }}>
-                        <MenuIcon size={"32px"} color={"white"}/>
-                    </IconButton>
+
+                    {loggedIn && (
+                        <IconButton onClick={() => {
+                            dispatch(handleDrawer())
+                        }}>
+                            <MenuIcon size={"32px"} color={"white"}/>
+                        </IconButton>
+                    )}
+
                     <IconButton onClick={() => {
                         router("/")
                     }}>

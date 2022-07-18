@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="" />
+    <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/advertisementPage/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/advertisementPage/style.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +86,7 @@
       <workItem from="1657728119952" duration="13075000" />
       <workItem from="1657809940127" duration="5891000" />
       <workItem from="1657895721750" duration="7835000" />
-      <workItem from="1658049204174" duration="9172000" />
+      <workItem from="1658049204174" duration="11658000" />
     </task>
     <servers />
   </component>

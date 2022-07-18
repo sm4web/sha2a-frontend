@@ -14,12 +14,12 @@ const useStyles = createStyles((theme) => ({
     link: {
         width: 50,
         height: 50,
-        boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
         borderRadius: theme.radius.md,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: "#2C4CC9",
+        color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
         '&:hover': {
             color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],

@@ -1,7 +1,17 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import {AdPage, AdPage__AdTitle, AdPage__BreadCrmp, AdPage__ImageBar} from "./style";
+import {
+    AdPage,
+    AdPage__AdInfoContainer,
+    AdPage__AdInfoHeader,
+    AdPage__AdInfoImage,
+    AdPage__AdTitle,
+    AdPage__BreadCrmp,
+    AdPage__ImageBar,
+    AdPage__SellerInfo
+} from "./style";
 import Typography from "@mui/material/Typography";
+import {images} from "../../constants";
 
 const AdvertisementPage = () => {
     return (
@@ -13,6 +23,20 @@ const AdvertisementPage = () => {
                 <Typography sx={AdPage__AdTitle} variant={"h2"}>
                     Ad Title
                 </Typography>
+            </Box>
+            <Box sx={{width: "100%", padding: {md: "32px 120px", xs: "24px"}}}>
+                <Box sx={AdPage__AdInfoContainer}>
+                    <Box sx={AdPage__AdInfoHeader}>
+                        <Box sx={AdPage__AdInfoImage}>
+                            <img width={"100%"} height={"100%"} src={images.adImageDemo}
+                                 alt=""
+                            />
+                        </Box>
+                        <Box sx={AdPage__SellerInfo}>
+                            asd
+                        </Box>
+                    </Box>
+                </Box>
             </Box>
         </Box>
     );
