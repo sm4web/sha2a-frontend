@@ -38,7 +38,7 @@ export const AdPage__AdInfoContainer = {
 
 export const AdPage__AdInfoHeader = {
     width: "100%",
-    height: "577px",
+    height: {md: "550px", xs: "100%"},
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
     alignItems: {md: "center", xs: "flex-start"},
@@ -53,6 +53,7 @@ export const AdPage__AdInfoImage = {
 
 export const AdPage__SellerInfo = {
     width: {md: "35%", xs: "100%"},
+    height: "100%",
     boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
     bgcolor: "#F8F8FA",
     borderRadius: "10px",
@@ -60,15 +61,12 @@ export const AdPage__SellerInfo = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-
+    justifyContent: "center",
 
 }
 
 export const AdPage__SellerName = {
-    fontSize: {md: "28px", xs: "18px"},
-    fontFamily: "GilorySemiBold",
-    marginBottom: "12px",
-    color: "primary.dark"
+    fontSize: {md: "28px", xs: "18px"}, fontFamily: "GilorySemiBold", marginBottom: "12px", color: "primary.dark"
 }
 
 export const AdPage__SellerType = {
@@ -76,5 +74,43 @@ export const AdPage__SellerType = {
     fontFamily: "GiloryMedium",
     color: "#818181",
     marginBottom: {md: "50px", xs: "32px"},
+}
 
+export const AdPage__AdDetailsContainer = {
+    mt: 4,
+    width: "100%",
+    display: "flex",
+    flexDirection: {md: "row", xs: "column"},
+    alignItems: {md: "center", xs: "flex-start"},
+    gap: {md: "40px", xs: "24px"}
+}
+
+export const AdPage__AdDetails = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    width: {md: "65%", xs: "100%"}, height: "100%",
+}
+
+export const AdPage__AdHeader = {
+    width: "100%",
+    display: "flex",
+    flexDirection: {md: "row", xs: "column"},
+    gap: "12px",
+    justifyContent: "space-between",
+    alignItems: {md: "center", xs: "flex-start"}
+}
+export const AdPage__AdHeaderName = {
+    fontSize: {md: "28px", xs: "24px"},
+    fontFamily: "GiloryBold",
+}
+export const AdPage__AdHeaderPrice = {
+    fontSize: {md: "40px", xs: "32px"},
+    fontFamily: "GiloryBold",
+    color: "primary.main"
+}
+
+
+export const AdPage__AdAddress = {
+    width: {md: "35%", xs: "100%"},
 }
