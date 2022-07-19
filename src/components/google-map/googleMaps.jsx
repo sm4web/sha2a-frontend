@@ -8,14 +8,15 @@ import '@reach/combobox/styles.css'
 
 const libraries = ['places']
 
-const GoogleMaps = ({form_name}) => {
+const GoogleMaps = ({form_name, lng, lat}) => {
+
     const formikProps = useFormikContext()
 
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: "AIzaSyBTgKas46Hnbj-hvCCVTU_PrdHxJ0Lyc7Q", libraries: libraries
     })
 
-    const [location, setLocation] = useState({lng: 31.2357, lat: 30.0444})
+    const [location, setLocation] = useState({lng: lng || 31.2357, lat: lat || 30.0444})
 
 
     // if (navigator.geolocation) {
@@ -26,7 +27,7 @@ const GoogleMaps = ({form_name}) => {
 
 
     useEffect(() => {
-        formikProps.setFieldValue(form_name, location)
+        formikProps?.setFieldValue(form_name, location)
     }, [location])
 
     if (loadError) {

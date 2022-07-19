@@ -34,6 +34,7 @@ import 'react-slideshow-image/dist/styles.css';
 import KingBedIcon from '@mui/icons-material/KingBed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import StraightenIcon from '@mui/icons-material/Straighten';
+import GoogleMaps from "../../components/google-map/googleMaps";
 
 const AdvertisementPage = () => {
     return (
@@ -124,7 +125,7 @@ const PropertyInfoAddress = () => {
                 </Box>
             </Box>
             <Box sx={AdPage__AdAddress}>
-
+                <GoogleMaps form_name={"a7a"} lat={30.0444} lng={31.2357}/>
             </Box>
         </Box>
     )
