@@ -10,6 +10,7 @@ import adImageDemo from '../assets/images/demo-ad.png'
 import UploadImagesIcon from '../assets/icons/upload-images-icon.png'
 import phoneIcon from '../assets/icons/phone-icon.png'
 import chatIcon from '../assets/icons/chat-icon.png'
+import addressIcon from '../assets/icons/address-icon.png'
 
 export default {
     signinHero,
@@ -17,6 +18,7 @@ export default {
     UploadImagesIcon,
     chatIcon,
     searchIcon,
+    addressIcon,
     phoneIcon,
     UploadProfilePic,
     SeekingIcon,

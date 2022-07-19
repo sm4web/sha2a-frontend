@@ -77,7 +77,7 @@ export const AdPage__SellerType = {
 }
 
 export const AdPage__AdDetailsContainer = {
-    mt: 4,
+    mt: '60px',
     width: "100%",
     display: "flex",
     flexDirection: {md: "row", xs: "column"},
@@ -98,7 +98,8 @@ export const AdPage__AdHeader = {
     flexDirection: {md: "row", xs: "column"},
     gap: "12px",
     justifyContent: "space-between",
-    alignItems: {md: "center", xs: "flex-start"}
+    alignItems: {md: "center", xs: "flex-start"},
+    mb: '45px'
 }
 export const AdPage__AdHeaderName = {
     fontSize: {md: "28px", xs: "24px"},
@@ -109,7 +110,14 @@ export const AdPage__AdHeaderPrice = {
     fontFamily: "GiloryBold",
     color: "primary.main"
 }
-
+export const AdPage__AdHeaderAddress = {
+    fontSize: {md: "24px", xs: "18px"},
+    fontFamily: "GiloryMedium",
+    color: "primary.main",
+    display: "flex",
+    alignItems: "center",
+    gap:'12px',
+}
 
 export const AdPage__AdAddress = {
     width: {md: "35%", xs: "100%"},

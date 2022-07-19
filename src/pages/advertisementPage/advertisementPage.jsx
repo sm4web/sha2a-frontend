@@ -6,6 +6,7 @@ import {
     AdPage__AdDetails,
     AdPage__AdDetailsContainer,
     AdPage__AdHeader,
+    AdPage__AdHeaderAddress,
     AdPage__AdHeaderName,
     AdPage__AdHeaderPrice,
     AdPage__AdInfoContainer,
@@ -57,6 +58,11 @@ const PropertyInfoAddress = () => {
                     </Typography>
                     <Typography sx={AdPage__AdHeaderPrice} variant={"h4"}>
                         250,000.00
+                    </Typography>
+                </Box>
+                <Box sx={AdPage__AdHeader}>
+                    <Typography sx={AdPage__AdHeaderAddress} variant={"h4"}>
+                        <img src={images.addressIcon} height={18} alt=""/> 329 Ambarukmo St, Brooklyn, NY
                     </Typography>
                 </Box>
             </Box>
