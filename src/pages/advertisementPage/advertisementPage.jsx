@@ -7,6 +7,8 @@ import {
     AdPage__AdDetailsContainer,
     AdPage__AdHeader,
     AdPage__AdHeaderAddress,
+    AdPage__AdHeaderFeature,
+    AdPage__AdHeaderFeatures,
     AdPage__AdHeaderName,
     AdPage__AdHeaderPrice,
     AdPage__AdInfoContainer,
@@ -24,9 +26,11 @@ import {Avatar} from "@mantine/core";
 import {images} from '../../constants'
 import InputHandler from "../../components/input-handler";
 import {Form, Formik} from "formik";
-import {InputAdornment} from "@mui/material";
+import {Grid, InputAdornment} from "@mui/material";
 import 'react-slideshow-image/dist/styles.css';
-
+import KingBedIcon from '@mui/icons-material/KingBed';
+import BathtubIcon from '@mui/icons-material/Bathtub';
+import StraightenIcon from '@mui/icons-material/Straighten';
 
 const AdvertisementPage = () => {
     return (
@@ -39,13 +43,18 @@ const AdvertisementPage = () => {
                     Ad Title
                 </Typography>
             </Box>
-            <Box sx={{width: "100%", padding: {md: "24px 120px", xs: "24px"}, mt: {md: "64px", xs: "0"}}}>
+            <Box sx={{
+                width: "100%",
+                padding: {xl: "24px 120px", lg: "24px 48px", xs: "24px"},
+                mt: {md: "64px", xs: "0"}
+            }}>
                 <PropertyImagesSeller/>
                 <PropertyInfoAddress/>
             </Box>
         </Box>
     );
 };
+
 
 const PropertyInfoAddress = () => {
     return (
@@ -64,6 +73,32 @@ const PropertyInfoAddress = () => {
                     <Typography sx={AdPage__AdHeaderAddress} variant={"h4"}>
                         <img src={images.addressIcon} height={18} alt=""/> 329 Ambarukmo St, Brooklyn, NY
                     </Typography>
+                </Box>
+                <Box sx={AdPage__AdHeaderFeatures}>
+                    <Grid container spacing={2}>
+                        <Grid item lg={2} md={4} xs={6}>
+                            <Box sx={AdPage__AdHeaderFeature}>
+                                <KingBedIcon/>
+                                <h3>2 Bedrooms</h3>
+                            </Box>
+                        </Grid>
+
+                        <Grid item lg={2} md={4} xs={6}>
+                            <Box sx={AdPage__AdHeaderFeature}>
+                                <BathtubIcon/>
+                                <h3>2 Bedrooms</h3>
+                            </Box>
+                        </Grid>
+
+                        <Grid item lg={2} md={4} xs={6}>
+                            <Box sx={AdPage__AdHeaderFeature}>
+                                <StraightenIcon/>
+                                <h3>2 Bedrooms</h3>
+                            </Box>
+                        </Grid>
+
+                    </Grid>
+
                 </Box>
             </Box>
             <Box sx={AdPage__AdAddress}></Box>

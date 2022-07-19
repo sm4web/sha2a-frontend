@@ -119,6 +119,18 @@ export const AdPage__AdHeaderAddress = {
     gap: '12px',
 }
 
+export const AdPage__AdHeaderFeatures = {
+    width: "100%",
+}
+
+export const AdPage__AdHeaderFeature = {
+    userSelect: "none", display: "flex", alignItems: "center", gap: "12px", h3: {
+        fontSize: "16px", fontFamily: "GiloryMedium", color: "primary.gray"
+    }, svg: {
+        color: "primary.dark"
+    }
+}
+
 export const AdPage__AdAddress = {
     width: {md: "35%", xs: "100%"},
 }
