@@ -14,6 +14,7 @@ import {
     AdPage__AdInfoContainer,
     AdPage__AdInfoHeader,
     AdPage__AdInfoImage,
+    AdPage__AdPropertyDescContent,
     AdPage__AdPropertyDescTitle,
     AdPage__AdTitle,
     AdPage__BreadCrmp,
@@ -112,9 +113,19 @@ const PropertyInfoAddress = () => {
                     <Typography sx={AdPage__AdPropertyDescTitle} variant={"h5"}>
                         Property Description
                     </Typography>
+                    <Typography sx={AdPage__AdPropertyDescContent} variant={"h5"}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget dolor nam risus sem hac consequat.
+                        Nec vitae consectetur velit eu, etiam. Nulla senectus dictumst mauris nunc. Senectus nulla
+                        lectus nam quis nisl non morbi non.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget dolor nam risus sem hac consequat.
+                        Nec vitae consectetur velit eu, etiam. Nulla senectus dictumst mauris nunc. Senectus nulla
+                        lectus
+                    </Typography>
                 </Box>
             </Box>
-            <Box sx={AdPage__AdAddress}></Box>
+            <Box sx={AdPage__AdAddress}>
+
+            </Box>
         </Box>
     )
 }

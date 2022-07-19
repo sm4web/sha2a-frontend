@@ -143,6 +143,16 @@ export const AdPage__AdPropertyDescTitle = {
     fontFamily: "GilorySemiBold"
 }
 
+export const AdPage__AdPropertyDescContent = {
+    mt: 2,
+    padding: "0 12px",
+    borderLeft: "2px solid",
+    borderColor: "primary.main",
+    fontSize: {md: "20px", xs: "18px"},
+    color: '#5A5A5A',
+    lineHeight: "150%"
+}
+
 export const AdPage__AdAddress = {
     width: {md: "35%", xs: "100%"},
 }
