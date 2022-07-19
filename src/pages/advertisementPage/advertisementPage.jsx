@@ -30,7 +30,7 @@ const AdvertisementPage = () => {
                     Ad Title
                 </Typography>
             </Box>
-            <Box sx={{width: "100%", padding: {md: "32px 120px", xs: "24px"}}}>
+            <Box sx={{width: "100%", padding: {md: "24px 120px", xs: "24px"}, mt: "64px"}}>
                 <Box sx={AdPage__AdInfoContainer}>
                     <Box sx={AdPage__AdInfoHeader}>
                         <Box sx={AdPage__AdInfoImage}>
@@ -52,7 +52,8 @@ const AdvertisementPage = () => {
                             </Typography>
                             <Formik initialValues={{phone: ""}}>
                                 {() => (
-                                    <Form style={{width: "100%", display:"flex", flexDirection:"column", gap:"24px"}}>
+                                    <Form
+                                        style={{width: "100%", display: "flex", flexDirection: "column", gap: "24px"}}>
                                         <InputHandler
                                             fullWidth
                                             InputProps={{
