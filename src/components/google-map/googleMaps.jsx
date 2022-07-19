@@ -36,7 +36,7 @@ const GoogleMaps = ({form_name, lng, lat}) => {
 
     return isLoaded ? <div style={{width: "100%"}}>
         <p style={{fontSize: '20px', fontFamily: "GiloryMedium", marginBottom: "10px"}}>Address</p>
-        <PlacesAutoComplete setLocation={setLocation}/>
+        {!lat && <PlacesAutoComplete setLocation={setLocation}/>}
         <GoogleMap zoom={15} center={location}
                    mapContainerClassName={'map-container'}>
             <Marker
@@ -62,18 +62,20 @@ const PlacesAutoComplete = ({setLocation}) => {
         setLocation({lat, lng});
     }
 
-    return (<Combobox onSelect={handleSelect}>
-        <ComboboxInput disabled={!ready} value={value} onChange={e => setValue(e.target.value)}
-                       className={"combobox-input"}
-                       placeholder={"Enter address"}
-                       style={{border: "none"}}
-        />
-        <ComboboxPopover>
-            <ComboboxList>
-                {status === 'OK' && data.map(({place_id, description}) => (
-                    <ComboboxOption style={{fontSize: "16px"}} key={place_id} value={description}/>))}
-            </ComboboxList>
-        </ComboboxPopover>
-    </Combobox>)
+    return (
+        <Combobox onSelect={handleSelect}>
+            <ComboboxInput disabled={!ready} value={value} onChange={e => setValue(e.target.value)}
+                           className={"combobox-input"}
+                           placeholder={"Enter address"}
+                           style={{border: "none"}}
+            />
+            <ComboboxPopover>
+                <ComboboxList>
+                    {status === 'OK' && data.map(({place_id, description}) => (
+                        <ComboboxOption style={{fontSize: "16px"}} key={place_id} value={description}/>))}
+                </ComboboxList>
+            </ComboboxPopover>
+        </Combobox>
+    )
 }
 export default GoogleMaps;
