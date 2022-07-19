@@ -39,7 +39,7 @@ const AdvertisementPage = () => {
                     Ad Title
                 </Typography>
             </Box>
-            <Box sx={{width: "100%", padding: {md: "24px 120px", xs: "24px"}, mt: "64px"}}>
+            <Box sx={{width: "100%", padding: {md: "24px 120px", xs: "24px"}, mt: {md: "64px", xs: "0"}}}>
                 <PropertyImagesSeller/>
                 <PropertyInfoAddress/>
             </Box>

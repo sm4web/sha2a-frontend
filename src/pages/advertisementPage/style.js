@@ -99,7 +99,7 @@ export const AdPage__AdHeader = {
     gap: "12px",
     justifyContent: "space-between",
     alignItems: {md: "center", xs: "flex-start"},
-    mb: '45px'
+    mb: {md: '45px', xs: "24px"}
 }
 export const AdPage__AdHeaderName = {
     fontSize: {md: "28px", xs: "24px"},
@@ -116,7 +116,7 @@ export const AdPage__AdHeaderAddress = {
     color: "primary.main",
     display: "flex",
     alignItems: "center",
-    gap:'12px',
+    gap: '12px',
 }
 
 export const AdPage__AdAddress = {
