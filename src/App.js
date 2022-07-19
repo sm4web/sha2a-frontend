@@ -23,6 +23,9 @@ function App() {
                             <Route index element={<Home/>}/>
                             <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
                             <Route path={"advertisements/:id"} element={<AdvertisementPage/>}/>
+                            <Route path={"favorites"} element={<h1>Favorites</h1>}/>
+                            <Route path={"settings"} element={<h1>Settings</h1>}/>
+                            <Route path={"my-ads"} element={<h1>My Ads</h1>}/>
                         </Route>
                     </Route>
 
