@@ -46,13 +46,13 @@ export const AdPage__AdInfoHeader = {
 }
 
 export const AdPage__AdInfoImage = {
-    width: {md: "65%", xs: "100%"}, height: "100%", img: {
+    width: {xl: "65%", lg: "60%", md: "55%", xs: "100%"}, height: "100%", img: {
         borderRadius: "10px", objectFit: "cover",
     }
 }
 
 export const AdPage__SellerInfo = {
-    width: {md: "35%", xs: "100%"},
+    width: {xl: "35%", lg: "40%", md: "45%", xs: "100%"},
     height: "100%",
     boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
     bgcolor: "#F8F8FA",
@@ -129,6 +129,18 @@ export const AdPage__AdHeaderFeature = {
     }, svg: {
         color: "primary.dark"
     }
+}
+
+export const AdPage_AdPropertyDescContainer = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: 'flex-start',
+    mt: 4,
+}
+
+export const AdPage__AdPropertyDescTitle = {
+    fontSize: {md: '24px', xs: "16px"},
+    fontFamily: "GilorySemiBold"
 }
 
 export const AdPage__AdAddress = {

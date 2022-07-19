@@ -14,12 +14,14 @@ import {
     AdPage__AdInfoContainer,
     AdPage__AdInfoHeader,
     AdPage__AdInfoImage,
+    AdPage__AdPropertyDescTitle,
     AdPage__AdTitle,
     AdPage__BreadCrmp,
     AdPage__ImageBar,
     AdPage__SellerInfo,
     AdPage__SellerName,
-    AdPage__SellerType
+    AdPage__SellerType,
+    AdPage_AdPropertyDescContainer
 } from "./style";
 import Typography from "@mui/material/Typography";
 import {Avatar} from "@mantine/core";
@@ -57,6 +59,37 @@ const AdvertisementPage = () => {
 
 
 const PropertyInfoAddress = () => {
+
+    const FeaturesSection = () => {
+        return (
+            <Box sx={AdPage__AdHeaderFeatures}>
+                <Grid container spacing={2}>
+                    <Grid item lg={2} md={4} xs={6}>
+                        <Box sx={AdPage__AdHeaderFeature}>
+                            <KingBedIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                    <Grid item lg={2} md={4} xs={6}>
+                        <Box sx={AdPage__AdHeaderFeature}>
+                            <BathtubIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                    <Grid item lg={2} md={4} xs={6}>
+                        <Box sx={AdPage__AdHeaderFeature}>
+                            <StraightenIcon/>
+                            <h3>2 Bedrooms</h3>
+                        </Box>
+                    </Grid>
+
+                </Grid>
+            </Box>
+        )
+    }
+
     return (
         <Box sx={AdPage__AdDetailsContainer}>
             <Box sx={AdPage__AdDetails}>
@@ -74,31 +107,11 @@ const PropertyInfoAddress = () => {
                         <img src={images.addressIcon} height={18} alt=""/> 329 Ambarukmo St, Brooklyn, NY
                     </Typography>
                 </Box>
-                <Box sx={AdPage__AdHeaderFeatures}>
-                    <Grid container spacing={2}>
-                        <Grid item lg={2} md={4} xs={6}>
-                            <Box sx={AdPage__AdHeaderFeature}>
-                                <KingBedIcon/>
-                                <h3>2 Bedrooms</h3>
-                            </Box>
-                        </Grid>
-
-                        <Grid item lg={2} md={4} xs={6}>
-                            <Box sx={AdPage__AdHeaderFeature}>
-                                <BathtubIcon/>
-                                <h3>2 Bedrooms</h3>
-                            </Box>
-                        </Grid>
-
-                        <Grid item lg={2} md={4} xs={6}>
-                            <Box sx={AdPage__AdHeaderFeature}>
-                                <StraightenIcon/>
-                                <h3>2 Bedrooms</h3>
-                            </Box>
-                        </Grid>
-
-                    </Grid>
-
+                <FeaturesSection/>
+                <Box sx={AdPage_AdPropertyDescContainer}>
+                    <Typography sx={AdPage__AdPropertyDescTitle} variant={"h5"}>
+                        Property Description
+                    </Typography>
                 </Box>
             </Box>
             <Box sx={AdPage__AdAddress}></Box>
