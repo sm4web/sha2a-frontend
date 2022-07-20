@@ -9,6 +9,8 @@ import CompleteRegister from "./pages/completeRegister/completeRegister";
 import SideNav from "./components/side-nav/sideNav.tsx";
 import Home from "./pages/home/Home";
 import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
+import Favorite from "./pages/favorite/favorite";
+import MyAds from "./pages/myAds/myAds";
 // import AdvertisementPage from "./pages/advertisementPage/advertisementPage";
 const AdvertisementPage = React.lazy(() => import("./pages/advertisementPage/advertisementPage"))
 
@@ -24,9 +26,9 @@ function App() {
                                 <Route index element={<Home/>}/>
                                 <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
                                 <Route path={"advertisements/:id"} element={<AdvertisementPage/>}/>
-                                <Route path={"favorites"} element={<h1>Favorites</h1>}/>
+                                <Route path={"favorites"} element={<Favorite/>}/>
                                 <Route path={"settings"} element={<h1>Settings</h1>}/>
-                                <Route path={"my-ads"} element={<h1>My Ads</h1>}/>
+                                <Route path={"my-ads"} element={<MyAds/>}/>
                             </Route>
                         </Route>
 

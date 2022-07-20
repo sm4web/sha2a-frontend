@@ -9,7 +9,7 @@ export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
     return sha2a.post('/login/', values).then((response) => {
         return response.data
     }).catch((error) => {
-        return {errorMessage: error.response.statusText}
+        return {errorMessage: error.response.data.error}
     })
 })
 
@@ -71,6 +71,7 @@ export const userSlice = createSlice({
             state.error = action.payload
         },
 
+        // user profile update
         [userUpdate.pending]: (state) => {
             state.isLoading = true
 
