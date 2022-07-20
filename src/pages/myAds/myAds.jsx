@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Box from "@mui/material/Box";
 import AdResults from "../../components/ads-results/adResults";
 import Typography from "@mui/material/Typography";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("G-BBYHX22WV9")
 
 const MyAds = () => {
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search)
+        console.log(window.location.pathname + window.location.search)
+    }, [])
+
     return (
         <Box>
             <Typography sx={{
