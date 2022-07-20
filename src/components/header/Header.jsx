@@ -67,7 +67,7 @@ const Header = () => {
                     <IconButton onClick={() => {
                         router("/")
                     }}>
-                        <h3 style={{color: "#fff"}}>شقه</h3>
+                        <h3 style={{color: "#fff"}}>شقه لحد منحط لوقو</h3>
                     </IconButton>
                 </div>
                 <RenderOptions/>
