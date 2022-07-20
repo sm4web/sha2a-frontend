@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sorting-bar/sortingBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sorting-bar/sortingBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/style.js" afterDir="false" />
-    </list>
+    <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +81,7 @@
       <workItem from="1657809940127" duration="5891000" />
       <workItem from="1657895721750" duration="7835000" />
       <workItem from="1658049204174" duration="13924000" />
-      <workItem from="1658149052584" duration="16644000" />
+      <workItem from="1658149052584" duration="16895000" />
     </task>
     <servers />
   </component>
