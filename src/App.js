@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.scss';
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
 import Header from "./components/header/Header.jsx";
@@ -11,10 +11,16 @@ import Home from "./pages/home/Home";
 import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
 import Favorite from "./pages/favorite/favorite";
 import MyAds from "./pages/myAds/myAds";
+import ReactGA from 'react-ga'
+
 // import AdvertisementPage from "./pages/advertisementPage/advertisementPage";
 const AdvertisementPage = React.lazy(() => import("./pages/advertisementPage/advertisementPage"))
 
+
 function App() {
+
+
+
     return (
         <div className="App">
             <React.Suspense fallback={<div>Loading...</div>}>

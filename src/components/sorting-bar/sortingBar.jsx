@@ -17,7 +17,7 @@ const SortingBar = () => {
         setSort(e.target.value)
     }
     return (
-        <Box display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+        <Box sx={{p: 2}} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
             <Box>
                 <Typography variant={"span"} sx={ResultCountStyle}>
                     32 Search Result
