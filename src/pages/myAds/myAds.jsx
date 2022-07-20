@@ -4,7 +4,7 @@ import AdResults from "../../components/ads-results/adResults";
 import Typography from "@mui/material/Typography";
 import ReactGA from "react-ga";
 
-ReactGA.initialize("G-XMNL18J409", {debug: true})
+ReactGA.initialize("UA-211175824-2", {debug: false})
 
 const MyAds = () => {
 
