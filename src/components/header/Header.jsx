@@ -7,6 +7,7 @@ import {Menu2 as MenuIcon, MessageCircle} from 'tabler-icons-react';
 import {Avatar} from '@mantine/core';
 import {IconButton} from "@mui/material";
 import {handleDrawer} from "../../features/drawer/drawerSlice";
+import {images} from "../../constants";
 
 
 const Header = () => {
@@ -67,7 +68,7 @@ const Header = () => {
                     <IconButton onClick={() => {
                         router("/")
                     }}>
-                        <h3 style={{color: "#fff"}}>شقه لحد منحط لوقو</h3>
+                        <img src={images.logo} width={86} alt=""/>
                     </IconButton>
                 </div>
                 <RenderOptions/>

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {createStyles, Drawer, Group, Navbar, Tooltip, UnstyledButton, useMantineTheme} from '@mantine/core';
 import {Ad, Heart, Home2, Icon as TablerIcon, Logout, Settings} from 'tabler-icons-react';
 import {useDispatch, useSelector} from "react-redux";
@@ -6,6 +6,8 @@ import {signOut} from '../../features/user/userSlice'
 import {useNavigate} from "react-router-dom";
 import {handleDrawer} from '../../features/drawer/drawerSlice'
 import {Box} from "@mui/material";
+import {images} from "../../constants";
+
 
 const useStyles = createStyles((theme) => ({
     navbar: {
@@ -21,8 +23,6 @@ const useStyles = createStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         color: "#2C4CC9",
-        // color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
-        // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
         '&:hover': {
             color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
@@ -115,6 +115,7 @@ const SideNav = () => {
             <Navbar className={classes.navbar}>
                 <Navbar.Section>
                     <Group direction="column" align="start" spacing={60}>
+                        <img src={images.logoDark} width={120} style={{margin:"auto"}} alt=""/>
                         {links}
                         <Box display={"flex"} alignItems={"center"} gap={2}>
                             <NavbarLink onClick={onSignOut} icon={Logout} label="Logout"/>

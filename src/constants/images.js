@@ -11,13 +11,16 @@ import UploadImagesIcon from '../assets/icons/upload-images-icon.png'
 import phoneIcon from '../assets/icons/phone-icon.png'
 import chatIcon from '../assets/icons/chat-icon.png'
 import addressIcon from '../assets/icons/address-icon.png'
+import logo from '../assets/images/logo.png'
+import logoDark from '../assets/images/logo-dark.png'
 
 export default {
     signinHero,
     signupHero,
     UploadImagesIcon,
-    chatIcon,
+    chatIcon, logoDark,
     searchIcon,
+    logo,
     addressIcon,
     phoneIcon,
     UploadProfilePic,
