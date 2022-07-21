@@ -68,7 +68,7 @@ const Header = () => {
                     <IconButton onClick={() => {
                         router("/")
                     }}>
-                        <img src={images.logo} width={86} alt=""/>
+                        <img src={images.logo} className={styles.logo} alt="logo Sha2a- Real Estate"/>
                     </IconButton>
                 </div>
                 <RenderOptions/>

@@ -102,3 +102,10 @@
     display: none;
   }
 }
+
+.logo {
+  width: 84px;
+  @media screen and (max-width: 720px) {
+    width: 64px;
+  }
+}
