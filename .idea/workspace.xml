@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +85,7 @@
       <workItem from="1657895721750" duration="7835000" />
       <workItem from="1658049204174" duration="13924000" />
       <workItem from="1658149052584" duration="19404000" />
-      <workItem from="1658411755923" duration="1939000" />
+      <workItem from="1658411755923" duration="3007000" />
     </task>
     <servers />
   </component>
