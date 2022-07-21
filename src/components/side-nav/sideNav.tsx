@@ -12,7 +12,6 @@ import {images} from "../../constants";
 const useStyles = createStyles((theme) => ({
     navbar: {
         height: "fit-content",
-        marginTop: "120px",
     },
 
     link: {
@@ -107,15 +106,14 @@ const SideNav = () => {
             aria-labelledby="drawer-title"
             aria-describedby="drawer-body"
             closeButtonLabel="Close drawer"
-            padding="48px"
             onClose={() => {
                 dispatch(handleDrawer())
             }}
         >
             <Navbar className={classes.navbar}>
                 <Navbar.Section>
-                    <Group direction="column" align="start" spacing={60}>
-                        <img src={images.logoDark} width={120} style={{margin:"auto"}} alt=""/>
+                    <Group direction="column" align="start" spacing={60} style={{maxWidth: "50%", margin: "auto"}}>
+                        <img src={images.logoDark} width={120} style={{margin: "auto"}} alt=""/>
                         {links}
                         <Box display={"flex"} alignItems={"center"} gap={2}>
                             <NavbarLink onClick={onSignOut} icon={Logout} label="Logout"/>
