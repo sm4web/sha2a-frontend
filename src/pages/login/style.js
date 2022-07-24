@@ -3,7 +3,7 @@ export const LoginStyle = {
     flexDirection: "column",
     gap: "32px",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     minHeight: "100vh",
     backgroundImage: "linear-gradient(to bottom, #0E3F6C, #000022, #233894)",
     color: "#fff"

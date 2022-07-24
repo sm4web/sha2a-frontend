@@ -12,7 +12,14 @@ const LogoBanner = ({theme = "light"}) => {
                 color: theme === "dark" ? "#0B0E16" : "#fff",
             }}>
                 Sha2a - For Real State Marketing</Typography>
-            <Box sx={{height: "100%", width: "2px", bgcolor: theme === "dark" ? "#0B0E16" : "#fff"}}></Box>
+            <Box sx={{
+                height: {md: "100%", xs: "2px"},
+                width: {md: "2px", xs: "100%"},
+                bgcolor: theme === "dark" ? "#0B0E16" : "#fff"
+            }}
+            >
+
+            </Box>
             <img width={120} src={theme === "dark" ? images.logoDark : images.logo} alt=""/>
         </Box>
     );
