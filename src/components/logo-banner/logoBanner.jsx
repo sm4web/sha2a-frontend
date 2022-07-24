@@ -10,7 +10,6 @@ const LogoBanner = ({theme = "light"}) => {
                 fontSize: {md: "24px", xs: "16px"},
                 fontFamil: "GilorySemiBold",
                 color: theme === "dark" ? "#0B0E16" : "#fff",
-                textAlign:"justify",
             }}>
                 Sha2a - For Real State Marketing</Typography>
             <Box sx={{height: "100%", width: "2px", bgcolor: theme === "dark" ? "#0B0E16" : "#fff"}}></Box>
