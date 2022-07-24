@@ -63,7 +63,7 @@ export const LoginSubmitButton = {
 
 export const Register__AlreadyHaveAccount = {
     color: "primary.dark",
-    fontSize: {md: "18px", xs: "12px"},
+    fontSize: {md: "18px", xs: "16px"},
     textAlign: "center",
     a: {
         textDecoration: "none",

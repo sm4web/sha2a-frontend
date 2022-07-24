@@ -70,7 +70,7 @@ export const LoginSubmitButton = {
 
 export const Login__DontHaveAccount = {
     color: "#fff",
-    fontSize: {md: "18px", xs: "12px"},
+    fontSize: {md: "18px", xs: "16px"},
     textAlign: "center",
     a: {
         textDecoration: "none",
