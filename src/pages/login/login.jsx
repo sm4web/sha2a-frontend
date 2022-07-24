@@ -50,8 +50,6 @@ const Login = () => {
                         {() => (
                             <Form style={LoginFormContent}>
                                 <Typography variant={"h1"} sx={LoginFormTitle}>Hello! Welcome back.</Typography>
-                                <Typography variant={"h3"} sx={LoginFormMessage}>Please Enter your email and
-                                    password</Typography>
                                 <InputHandler placeholder={"Write your email."} name={"email"} label={"Email"}/>
                                 <InputHandler placeholder={"Write your Password."} name={"password"}
                                               label={"Password"} type={"password"}/>

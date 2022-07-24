@@ -8,7 +8,7 @@ const LogoBanner = ({theme = "light"}) => {
         <Box sx={Container}>
             <Typography variant={"h2"} sx={{
                 fontSize: {md: "24px", xs: "18px"},
-                fontFamil: "GiloryMedium",
+                fontFamil: "GilorySemiBold",
                 color: theme === "dark" ? "#0B0E16" : "#fff"
             }}>
                 Sha2a - Real Estate</Typography>
