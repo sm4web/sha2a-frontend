@@ -1,5 +1,7 @@
 export const LoginStyle = {
     display: "flex",
+    flexDirection: "column",
+    gap: "32px",
     alignItems: "center",
     justifyContent: "center",
     minHeight: "100vh",
@@ -31,7 +33,7 @@ export const LoginFormStyle = {
 export const LoginFormContent = {
     display: "flex",
     flexDirection: "column",
-    gap: "24px",
+    gap: "18px",
     width: "100%",
 }
 

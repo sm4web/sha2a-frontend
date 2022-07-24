@@ -19,6 +19,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {userRegister} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
+import LogoBanner from "../../components/logo-banner/logoBanner";
 
 
 const Register = () => {
@@ -32,6 +33,7 @@ const Register = () => {
     }
     return (
         <Box sx={LoginStyle}>
+            <LogoBanner theme={"dark"}/>
             <Box sx={LoginContainerStyle}>
                 <Box sx={SideImageStyle}>
                     <img src={SideImage} alt="Sign in to Sha2a - Real E-state Platform"/>
@@ -44,8 +46,6 @@ const Register = () => {
                         {() => (
                             <Form style={LoginFormContent}>
                                 <Typography variant={"h1"} sx={LoginFormTitle}>Create New Account</Typography>
-                                <Typography variant={"h3"} sx={LoginFormMessage}>Fill the Fields to
-                                    create an account</Typography>
                                 <InputHandler placeholder={"Write your email."} name={"email"} label={"Email"}/>
                                 <InputHandler placeholder={"Write your phone number."} name={"phone"}
                                               label={"Phone Number"} type={"tel"}

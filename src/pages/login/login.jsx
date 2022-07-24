@@ -20,6 +20,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {userLogin} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
+import LogoBanner from "../../components/logo-banner/logoBanner";
 
 
 const Login = () => {
@@ -36,6 +37,7 @@ const Login = () => {
 
     return (
         <Box sx={LoginStyle}>
+            <LogoBanner/>
             <Box sx={LoginContainerStyle}>
                 <Box sx={SideImageStyle}>
                     <img src={SideImage} alt="Sign in to Sha2a - Real E-state Platform"/>

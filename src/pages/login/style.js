@@ -1,5 +1,7 @@
 export const LoginStyle = {
     display: "flex",
+    flexDirection: "column",
+    gap: "32px",
     alignItems: "center",
     justifyContent: "center",
     minHeight: "100vh",
@@ -17,6 +19,7 @@ export const LoginContainerStyle = {
     width: "100%",
 
 }
+
 
 export const SideImage = {
     img: {
