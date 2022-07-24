@@ -7,11 +7,12 @@ const LogoBanner = ({theme = "light"}) => {
     return (
         <Box sx={Container}>
             <Typography variant={"h2"} sx={{
-                fontSize: {md: "24px", xs: "18px"},
+                fontSize: {md: "24px", xs: "16px"},
                 fontFamil: "GilorySemiBold",
-                color: theme === "dark" ? "#0B0E16" : "#fff"
+                color: theme === "dark" ? "#0B0E16" : "#fff",
+                textAlign:"justify",
             }}>
-                Sha2a - Real Estate</Typography>
+                Sha2a - For Real State Marketing</Typography>
             <Box sx={{height: "100%", width: "2px", bgcolor: theme === "dark" ? "#0B0E16" : "#fff"}}></Box>
             <img width={120} src={theme === "dark" ? images.logoDark : images.logo} alt=""/>
         </Box>
