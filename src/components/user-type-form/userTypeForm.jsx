@@ -82,7 +82,7 @@ const UserTypeForm = () => {
                         </FormControl>
                     </Grid>
                     <Grid item container xs={12}>
-                        <Button onClick={() => router('/home/user')} variant="contained" sx={UTypeSubmitButton}>
+                        <Button onClick={() => router('/')} variant="contained" sx={UTypeSubmitButton}>
                             Next
                         </Button>
                     </Grid>

@@ -16,14 +16,19 @@ import GoogleMaps from "../../components/google-map/googleMaps";
 import UploadImages from "../../components/upload-images/uploadImages";
 
 const CreateAdvertisement = () => {
+
+    const onCreateAd = (values) => {
+
+    }
+
     return (
         <Box sx={CreateAd}>
             <Formik onSubmit={(values) => {
                 console.log(values)
             }} initialValues={{
                 title: "",
-                type: "",
-                area: 0,
+                property_type: "",
+                space: 0,
                 description: "",
                 price: 0,
                 number_of_rooms: 0,
@@ -32,8 +37,9 @@ const CreateAdvertisement = () => {
             }}>
                 {({values}) => (
                     <Form>
-                        <AdType name={"type"}/>
+                        <AdType name={"property_type"}/>
                         <Box sx={CreateAd__FormContainer}>
+
                             {/* LEFT SIDE*/}
                             <Box sx={CreateAd__SideContainer}>
                                 <InputHandler label={"Title"} placeholder={"Enter Title"} name={"title"}/>
@@ -61,6 +67,7 @@ const CreateAdvertisement = () => {
                                 <GoogleMaps form_name={"location"}/>
                                 <UploadImages name={"images"}/>
                             </Box>
+
                         </Box>
                         <Box sx={{
                             width: {md: "50%", xs: "100%"},

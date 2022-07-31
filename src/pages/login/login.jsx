@@ -2,13 +2,12 @@ import React from 'react';
 import SideImage from '../../assets/images/signin-side.svg'
 import {Form, Formik} from 'formik'
 import InputHandler from "../../components/input-handler";
-import {Alert, Box, Button, Divider, Typography} from "@mui/material";
+import {Box, Button, Divider, Typography} from "@mui/material";
 import {
     Login__DontHaveAccount,
     LoginContainerStyle,
     LoginForgotPassword,
     LoginFormContent,
-    LoginFormMessage,
     LoginFormStyle,
     LoginFormTitle,
     LoginStyle,
@@ -21,19 +20,25 @@ import {useDispatch, useSelector} from "react-redux";
 import {userLogin} from "../../features/user/userSlice";
 import accountSchema from "../../validations/accountSchema";
 import LogoBanner from "../../components/logo-banner/logoBanner";
+import Loader from "../../components/loader/Loader";
+import RenderSnackbar from "../../components/renderSnackbar/renderSnackbar";
 
 
 const Login = () => {
 
     const error = useSelector(state => state.user.data?.errorMessage)
+    console.log(Boolean(error)
+    )
+    const isLoading = useSelector(state => state.user.isLoading)
     const router = useNavigate()
     const dispatch = useDispatch()
 
-    const onSignIn = (values) => {
-        dispatch(userLogin(values))
-        router('/')
+    const onSignIn = async (values) => {
+        const newValues = {...values, router}
+        await dispatch(userLogin(newValues))
     }
 
+    if (isLoading) return <Loader/>
 
     return (
         <Box sx={LoginStyle}>
@@ -58,8 +63,8 @@ const Login = () => {
                                 <Typography variant={"h3"} sx={Login__DontHaveAccount}>Don't have an account? <Link
                                     to={"/register"}>create account</Link></Typography>
                                 <Divider>OR</Divider>
-                                <GoogleAuth/>
-                                {error && <Alert severity="error">{error}</Alert>}
+                                {/*<GoogleAuth/>*/}
+                                <RenderSnackbar open={Boolean(error)} content={error}/>
                             </Form>
                         )}
                     </Formik>

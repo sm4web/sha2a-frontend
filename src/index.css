@@ -1,3 +1,30 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'GiloryMedium', serif;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
 @font-face {
     font-family: "GiloryLight";
     src: url("./assets/fonts/Gilroy-Light.ttf");
@@ -23,19 +50,4 @@
     src: url("./assets/fonts/Gilroy-Bold.ttf");
 }
 
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'GiloryMedium';
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

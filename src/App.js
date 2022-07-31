@@ -11,13 +11,12 @@ import Home from "./pages/home/Home";
 import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement";
 import Favorite from "./pages/favorite/favorite";
 import MyAds from "./pages/myAds/myAds";
+import UserVerify from "./pages/userVerify/userVerify";
 
-// import AdvertisementPage from "./pages/advertisementPage/advertisementPage";
 const AdvertisementPage = React.lazy(() => import("./pages/advertisementPage/advertisementPage"))
 
 
 function App() {
-
 
 
     return (
@@ -25,7 +24,6 @@ function App() {
             <React.Suspense fallback={<div>Loading...</div>}>
                 <BrowserRouter>
                     <Routes>
-
                         <Route element={<ProtectedRoute/>}>
                             <Route path={"/"} element={<Layout/>}>
                                 <Route index element={<Home/>}/>
@@ -40,6 +38,7 @@ function App() {
                         {/*  START -- All the register steps  */}
                         <Route exact path={"/login"} element={<Login/>}/>
                         <Route exact path={"/register"} element={<Register/>}/>
+                        <Route exact path={"/user-verify"} element={<UserVerify/>}/>
                         <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
                         {/*  END -- All the register steps  */}
 

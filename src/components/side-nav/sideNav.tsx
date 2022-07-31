@@ -86,7 +86,9 @@ const SideNav = () => {
             }}
             display={"flex"}
             alignItems={"center"}
-            gap={2}>
+            key={link.label}
+            gap={2}
+        >
             <NavbarLink
                 {...link}
                 key={link.label}

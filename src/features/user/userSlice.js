@@ -2,33 +2,53 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import sha2a from "../../API/axios";
 
 const initialState = {
-    loggedIn: true, data: null, isLoading: false
+    loggedIn: false, data: null, isLoading: false
 };
 
 export const userLogin = createAsyncThunk('user/userLogin', async (values) => {
-    return sha2a.post('/login/', values).then((response) => {
+    return sha2a.post('user/login/', values).then((response) => {
+        values.router('/')
         return response.data
     }).catch((error) => {
         return {errorMessage: error.response.data.error}
     })
 })
 
-export const userRegister = createAsyncThunk('user/userRegister', async (values) => {
-    return sha2a.post('/register/', values).then((response) => {
-        return response.data
+export const userRegister = createAsyncThunk('user/userRegister', async (values, thunkAPI) => {
+    return sha2a.post('user/register/', values).then((regRes) => {
+        values.router('/user-verify')
+        const password = values.password
+        return {...regRes.data, password}
     }).catch((error) => {
-        return {errorMessage: error.response.statusText}
+        return values.setError(error.response.statusText)
+    })
+})
+
+export const userVerify = createAsyncThunk('user/userValidation', async (values, thunkAPI) => {
+    return sha2a.post('user/validate_otp/', values).then((otpRes) => {
+        const {email, password} = thunkAPI.getState().user.data
+        return sha2a.post('user/login/', {email, password}).then((loginRes) => {
+            values.router('/personal-info?step=2')
+            return loginRes.data
+        })
+
+    }).catch((error) => {
+        values.setError(error.response.data.detail)
     })
 })
 
 export const userUpdate = createAsyncThunk('user/userUpdate', async (values, thunkAPI) => {
-
-    return sha2a.put(`/profile/19/`, values, {
+    const {access, profile_id} = thunkAPI.getState().user.data
+    return sha2a.put(`user/profile/${profile_id}/`, values, {
         headers: {
-            authorization: `Bearer ${thunkAPI.getState().user.data?.access}`
+            authorization: `Bearer ${access}`
         }
     }).then((response) => {
-        return response.data
+        if (response.status === 200) {
+            values.router('/')
+
+        }
+        // return response.data
     }).catch((error) => {
         return {errorMessage: error.response.statusText}
     })
@@ -46,7 +66,6 @@ export const userSlice = createSlice({
     }, extraReducers: {
         [userLogin.pending]: (state) => {
             state.isLoading = true
-
         }, [userLogin.fulfilled]: (state, action) => {
             state.isLoading = false
             state.data = action.payload
@@ -77,10 +96,28 @@ export const userSlice = createSlice({
 
         }, [userUpdate.fulfilled]: (state, action) => {
             state.isLoading = false
-            state.data = action.payload
+            state.data = {...state.data, ...action.payload}
             state.loggedIn = true
 
         }, [userUpdate.rejected]: (state, action) => {
+            state.isLoading = false
+            state.error = action.payload
+        },
+
+        // user profile update
+        [userVerify.pending]: (state) => {
+            state.isLoading = true
+
+        },
+
+        [userVerify.fulfilled]: (state, action) => {
+            state.isLoading = false
+            state.loggedIn = true
+            state.data = action.payload
+
+        },
+
+        [userVerify.rejected]: (state, action) => {
             state.isLoading = false
             state.error = action.payload
         },

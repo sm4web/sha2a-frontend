@@ -3,33 +3,33 @@ import {Box, Button, Typography} from "@mui/material";
 import {Form, Formik} from "formik";
 import UploadPicture from "../upload-profile-picture/UploadPicture";
 import {PInfoCustomDropDown, PInfoForm, PInfoFormContent, PInfoStyle, PInfoSubmitButton} from "./style";
-import InputHandler from "../input-handler";
-import personalInfoSchema from "../../validations/personalInfoSchema";
 import {CountryDropdown, RegionDropdown} from "react-country-region-selector";
 import {useDispatch} from "react-redux";
 import {userUpdate} from "../../features/user/userSlice";
+import {useNavigate} from "react-router-dom";
 
 
-const initValues = {name: "", profile_photo: ""}
+const initValues = {profile_photo: ""}
 
 const PersonalInfoForm = () => {
     const [country, setCountry] = useState('')
     const [region, setRegion] = useState('')
     const dispatch = useDispatch()
+    const router = useNavigate()
 
     const onNextStep = (values) => {
-        dispatch(userUpdate(values))
+        const newValues = {...values, router}
+        dispatch(userUpdate(newValues))
     }
 
 
     return (<Box sx={PInfoStyle}>
         <Box sx={PInfoForm}>
-            <Formik validationSchema={personalInfoSchema} initialValues={initValues} onSubmit={(values) => {
+            <Formik initialValues={initValues} onSubmit={(values) => {
                 onNextStep(values)
             }}>
                 {({values}) => (<Form style={PInfoFormContent}>
                     <UploadPicture name={"profile_photo"}/>
-                    <InputHandler name={"name"} label={"User Name"} placeholder={"Enter your User Name"}/>
                     <Box>
                         <Typography variant="h1" sx={{fontSize: {lg: "20px", xs: "16px"}, fontFamily: "GiloryMedium"}}>
                             Country

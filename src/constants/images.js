@@ -13,14 +13,17 @@ import chatIcon from '../assets/icons/chat-icon.png'
 import addressIcon from '../assets/icons/address-icon.png'
 import logo from '../assets/images/logo.png'
 import logoDark from '../assets/images/logo-dark.png'
+import loader from '../assets/images/loader.svg'
+import OTPIcon from '../assets/icons/security.png'
 
 export default {
     signinHero,
     signupHero,
     UploadImagesIcon,
     chatIcon, logoDark,
+    OTPIcon,
     searchIcon,
-    logo,
+    logo, loader,
     addressIcon,
     phoneIcon,
     UploadProfilePic,
