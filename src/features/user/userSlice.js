@@ -46,9 +46,7 @@ export const userUpdate = createAsyncThunk('user/userUpdate', async (values, thu
     }).then((response) => {
         if (response.status === 200) {
             values.router('/')
-
         }
-        // return response.data
     }).catch((error) => {
         return {errorMessage: error.response.statusText}
     })

@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/security.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/loader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/Loader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/renderSnackbar/renderSnackbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/createProperty/propertySlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/userVerify/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/userVerify/userVerify.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validations/OTPSchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/personal-info-form/personalInfoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/personal-info-form/personalInfoForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-nav/sideNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user-type-form/userTypeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-type-form/userTypeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/images.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/user/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/personalInfoSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +92,7 @@
       <workItem from="1659001200645" duration="10548000" />
       <workItem from="1659091511642" duration="1691000" />
       <workItem from="1659184708347" duration="919000" />
-      <workItem from="1659263739615" duration="7571000" />
+      <workItem from="1659263739615" duration="7686000" />
     </task>
     <servers />
   </component>
