@@ -1,22 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Alert, Snackbar} from "@mui/material";
 
-const RenderSnackbar = ({open, content, status}) => {
-    const [isOpen, setOpen] = useState(open)
+const RenderSnackbar = ({open, setOpen, content, status}) => {
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
 
-        setOpen(false)
+        setOpen(null)
+
     };
+
 
     return (
         <Snackbar
-            open={isOpen}
-            autoHideDuration={6000}
-
+            open={open}
+            autoHideDuration={4000}
+            onClose={handleClose}
         >
             <Alert onClose={handleClose} severity={status === 'success' ? "success" : "error"} sx={{width: '100%'}}>
                 {content}

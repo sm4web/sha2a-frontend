@@ -6,24 +6,29 @@ const initialState = {
 };
 
 export const createProperty = createAsyncThunk('create-property/createProperty', async (values, thunkAPI) => {
-    return sha2a.post('/property/', values).then((res) => {
+    const {access} = thunkAPI.getState().user.data
+    return sha2a.post('/property/', values, {
+        headers: {
+            authorization: `Bearer ${access}`
+        }
+    }).then((res) => {
         console.log(res)
         return res.data
     }).catch((error) => {
-        return {errorMessage: error.response.statusText}
+        values.setError(error.response.statusText)
     })
 })
 
 
 export const propertySlice = createSlice({
-    name: 'create-property', initialState, reducers: {}, extraReducers: {
+    name: 'create-property', initialState,
+    reducers: {},
+    extraReducers: {
         [createProperty.pending]: (state) => {
             state.isLoading = true
-        },
-        [createProperty.fulfilled]: (state) => {
+        }, [createProperty.fulfilled]: (state) => {
             state.isLoading = false
-        },
-        [createProperty.rejected]: (state) => {
+        }, [createProperty.rejected]: (state) => {
             state.isLoading = false
         }
     }

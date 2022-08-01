@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Box from "@mui/material/Box";
 import {
     ChooseType,
@@ -14,27 +14,37 @@ import {Form, Formik, useFormikContext} from "formik";
 import InputHandler from "../../components/input-handler";
 import GoogleMaps from "../../components/google-map/googleMaps";
 import UploadImages from "../../components/upload-images/uploadImages";
+import {useDispatch, useSelector} from "react-redux";
+import {createProperty} from "../../features/createProperty/propertySlice";
+import {useNavigate} from "react-router-dom";
+import RenderSnackbar from "../../components/renderSnackbar/renderSnackbar";
 
 const CreateAdvertisement = () => {
+    const dispatch = useDispatch()
+    const userID = useSelector(state => state.user.data['user id'])
+    const router = useNavigate()
+    const [error, setError] = useState(null)
 
     const onCreateAd = (values) => {
-
+        const editedValues = {...values, router, setError, location: "Victoria", property_type: "villa"}
+        dispatch(createProperty(editedValues))
     }
 
+    console.log(error)
     return (
         <Box sx={CreateAd}>
-            <Formik onSubmit={(values) => {
-                console.log(values)
-            }} initialValues={{
-                title: "",
-                property_type: "",
-                space: 0,
-                description: "",
-                price: 0,
-                number_of_rooms: 0,
-                location: "",
-                images: []
-            }}>
+            <Formik onSubmit={onCreateAd}
+                    initialValues={{
+                        title: "",
+                        property_type: "villa",
+                        space: 0,
+                        description: "",
+                        price: 0,
+                        number_of_rooms: 0,
+                        location: "Victoria",
+                        images: [],
+                        user_id: userID
+                    }}>
                 {({values}) => (
                     <Form>
                         <AdType name={"property_type"}/>
@@ -52,7 +62,7 @@ const CreateAdvertisement = () => {
 
                                 <InputHandler label={"House Area"} type={"number"}
                                               placeholder={"Enter Area ( sqft )"}
-                                              name={"area"}/>
+                                              name={"space"}/>
 
                                 <InputHandler label={"Price"} type={"number"} placeholder={"Enter Price ( EGP )"}
                                               name={"price"}/>
@@ -77,8 +87,9 @@ const CreateAdvertisement = () => {
                             display: "flex",
                             gap: "5%"
                         }}>
-                            <Button sx={CreateAd__SubmitButton} type={"submit"}>Save</Button>
+                            <Button sx={CreateAd__SubmitButton} type={"submit"}>Create</Button>
                             <Button sx={CreateAd__CancelButton}>Cancel</Button>
+                            <RenderSnackbar open={Boolean(error)} setOpen={setError} content={error}/>
                         </Box>
                     </Form>
                 )}

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/features/user/userSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/renderSnackbar/renderSnackbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/renderSnackbar/renderSnackbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/createProperty/propertySlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/createProperty/propertySlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +98,7 @@
       <workItem from="1659001200645" duration="10548000" />
       <workItem from="1659091511642" duration="1691000" />
       <workItem from="1659184708347" duration="919000" />
-      <workItem from="1659263739615" duration="7686000" />
+      <workItem from="1659263739615" duration="12021000" />
     </task>
     <servers />
   </component>

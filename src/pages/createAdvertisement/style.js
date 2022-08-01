@@ -1,5 +1,7 @@
 export const CreateAd = {
-    width: "100%", p: {md: 4, xs: 2},
+    width: "100%",
+    padding: {md: "0 24px", xs: "0 12px"},
+    mt: 2
 }
 
 

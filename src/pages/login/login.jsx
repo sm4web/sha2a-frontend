@@ -14,7 +14,6 @@ import {
     LoginSubmitButton,
     SideImage as SideImageStyle
 } from "./style";
-import GoogleAuth from "../../features/googleAuth/googleAuth";
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {userLogin} from "../../features/user/userSlice";
@@ -27,8 +26,6 @@ import RenderSnackbar from "../../components/renderSnackbar/renderSnackbar";
 const Login = () => {
 
     const error = useSelector(state => state.user.data?.errorMessage)
-    console.log(Boolean(error)
-    )
     const isLoading = useSelector(state => state.user.isLoading)
     const router = useNavigate()
     const dispatch = useDispatch()
@@ -39,7 +36,6 @@ const Login = () => {
     }
 
     if (isLoading) return <Loader/>
-
     return (
         <Box sx={LoginStyle}>
             <LogoBanner/>

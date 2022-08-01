@@ -63,7 +63,7 @@ const Register = () => {
                                     account? <Link
                                         to={"/login"}>Sign in</Link></Typography>
                                 {/*<GoogleAuth/>*/}
-                                <RenderSnackbar open={Boolean(error)} content={error}/>
+                                <RenderSnackbar open={Boolean(error)} setOpen={setError} content={error}/>
                             </Form>
                         )}
                     </Formik>
