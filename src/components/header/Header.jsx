@@ -13,6 +13,7 @@ import {images} from "../../constants";
 const Header = () => {
     const router = useNavigate()
     const loggedIn = useSelector(state => state.user.loggedIn)
+    const {username} = useSelector(state => state.user.data)
     const dispatch = useDispatch()
     const handleRoute = (event) => {
         const route = event.target.name
@@ -38,7 +39,7 @@ const Header = () => {
                         <Avatar radius={"xl"}
                                 alt={"it's me"}/>
                         <h3>
-                            Saif Mohamed
+                            {username}
                         </h3>
                     </div>
                 </div>

@@ -30,7 +30,6 @@ const CreateAdvertisement = () => {
         dispatch(createProperty(editedValues))
     }
 
-    console.log(error)
     return (
         <Box sx={CreateAd}>
             <Formik onSubmit={onCreateAd}
