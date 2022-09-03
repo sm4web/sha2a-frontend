@@ -197,7 +197,7 @@ const PropertyImagesSeller = () => {
                                 >
                                     <img src={images.chatIcon} width={22} alt=""/>
                                     <Typography variant={"body1"} sx={{fontWeight: '600'}}>
-                                        Chat With Seller
+                                        Chat with seller
                                     </Typography>
                                 </Box>
                             </Form>
