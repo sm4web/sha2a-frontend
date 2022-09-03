@@ -191,7 +191,7 @@ const PropertyImagesSeller = () => {
                                     textDecoration: 'none'
                                 }}
                                      component={'a'}
-                                     href="https://wa.me/+20155430440"
+                                     href="https://wa.me/+201554304409"
                                      target="_blank"
                                      rel="noopener noreferrer"
                                 >
