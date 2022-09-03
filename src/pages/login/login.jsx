@@ -2,7 +2,7 @@ import React from 'react';
 import SideImage from '../../assets/images/signin-side.svg'
 import {Form, Formik} from 'formik'
 import InputHandler from "../../components/input-handler";
-import {Box, Button, Divider, Typography} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import {
     Login__DontHaveAccount,
     LoginContainerStyle,
@@ -58,7 +58,7 @@ const Login = () => {
                                 <Button variant={"contained"} type={"submit"} sx={LoginSubmitButton}>Sign in</Button>
                                 <Typography variant={"h3"} sx={Login__DontHaveAccount}>Don't have an account? <Link
                                     to={"/register"}>create account</Link></Typography>
-                                <Divider>OR</Divider>
+                                {/*<Divider>OR</Divider>*/}
                                 {/*<GoogleAuth/>*/}
                                 <RenderSnackbar open={Boolean(error)} content={error}/>
                             </Form>

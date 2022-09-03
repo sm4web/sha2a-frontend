@@ -2,7 +2,8 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import sha2a from "../../API/axios";
 
 const initialState = {
-    data: null, isLoading: false
+    data: null,
+    isLoading: false
 };
 
 export const createProperty = createAsyncThunk('create-property/createProperty', async (values, thunkAPI) => {
@@ -12,7 +13,9 @@ export const createProperty = createAsyncThunk('create-property/createProperty',
             authorization: `Bearer ${access}`
         }
     }).then((res) => {
-        console.log(res)
+        if (res.status === 201) {
+            values.router('/')
+        }
         return res.data
     }).catch((error) => {
         values.setError(error.response.statusText)
@@ -20,10 +23,8 @@ export const createProperty = createAsyncThunk('create-property/createProperty',
 })
 
 
-export const propertySlice = createSlice({
-    name: 'create-property', initialState,
-    reducers: {},
-    extraReducers: {
+export const createPropertySlice = createSlice({
+    name: 'create-property', initialState, reducers: {}, extraReducers: {
         [createProperty.pending]: (state) => {
             state.isLoading = true
         }, [createProperty.fulfilled]: (state) => {
@@ -34,7 +35,7 @@ export const propertySlice = createSlice({
     }
 });
 
-export const {} = propertySlice.actions;
+export const {} = createPropertySlice.actions;
 
 
-export default propertySlice.reducer;
+export default createPropertySlice.reducer;

@@ -15,7 +15,7 @@ import InputHandler from "../../components/input-handler";
 import GoogleMaps from "../../components/google-map/googleMaps";
 import UploadImages from "../../components/upload-images/uploadImages";
 import {useDispatch, useSelector} from "react-redux";
-import {createProperty} from "../../features/createProperty/propertySlice";
+import {createProperty} from "../../features/createProperty/createPropertySlice";
 import {useNavigate} from "react-router-dom";
 import RenderSnackbar from "../../components/renderSnackbar/renderSnackbar";
 
@@ -26,7 +26,13 @@ const CreateAdvertisement = () => {
     const [error, setError] = useState(null)
 
     const onCreateAd = (values) => {
-        const editedValues = {...values, router, setError, location: "Victoria", property_type: "villa"}
+        const editedValues = {
+            ...values,
+            router,
+            setError,
+            location_long: values.location.lng,
+            location_lat: values.location.lat,
+        }
         dispatch(createProperty(editedValues))
     }
 
@@ -35,18 +41,22 @@ const CreateAdvertisement = () => {
             <Formik onSubmit={onCreateAd}
                     initialValues={{
                         title: "",
+                        ad_type: "",
                         property_type: "villa",
                         space: 0,
                         description: "",
                         price: 0,
                         number_of_rooms: 0,
+                        location_long: 0,
+                        location_lat: 0,
                         location: "Victoria",
                         images: [],
-                        user_id: userID
-                    }}>
+                        user: userID
+                    }}
+            >
                 {({values}) => (
                     <Form>
-                        <AdType name={"property_type"}/>
+                        <AdType name={"ad_type"}/>
                         <Box sx={CreateAd__FormContainer}>
 
                             {/* LEFT SIDE*/}

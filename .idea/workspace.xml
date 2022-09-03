@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2236e4c5-7fc9-43bc-800b-e3e9f289aa9d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/features/getProperties/getPropertiesSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Geocode/useGeoCode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ad-card/adCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ad-card/adCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ads-results/adResults.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/google-map/googleMaps.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/google-map/googleMaps.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/createProperty/propertySlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/createProperty/createPropertySlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/advertisementPage/advertisementPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/createAdvertisement/createAdvertisement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,32 +46,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/sha2a/src/features/createProperty&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\sha2a\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/sha2a/src/features",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "E:\\sha2a\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\sha2a\src\features" />
       <recent name="E:\sha2a\src\features\createProperty" />
       <recent name="E:\sha2a\src\components" />
       <recent name="E:\sha2a\src" />
       <recent name="E:\sha2a\src\components\userTypeForm" />
-      <recent name="E:\sha2a\src\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\sha2a\src\components\Header" />
@@ -94,7 +107,10 @@
       <workItem from="1659001200645" duration="10548000" />
       <workItem from="1659091511642" duration="1691000" />
       <workItem from="1659184708347" duration="919000" />
-      <workItem from="1659263739615" duration="12278000" />
+      <workItem from="1659263739615" duration="13672000" />
+      <workItem from="1659438779877" duration="2371000" />
+      <workItem from="1662039238099" duration="3543000" />
+      <workItem from="1662205032891" duration="8506000" />
     </task>
     <servers />
   </component>

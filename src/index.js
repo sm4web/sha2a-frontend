@@ -13,10 +13,10 @@ const root = createRoot(container);
 
 root.render(
     <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-        <ThemeProvider theme={theme}>
-            <App/>
-        </ThemeProvider>
-    </PersistGate>
-</Provider>
+        <PersistGate loading={null} persistor={persistor}>
+            <ThemeProvider theme={theme}>
+                <App/>
+            </ThemeProvider>
+        </PersistGate>
+    </Provider>
 );

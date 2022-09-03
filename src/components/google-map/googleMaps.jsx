@@ -18,14 +18,6 @@ const GoogleMaps = ({form_name, lng, lat}) => {
 
     const [location, setLocation] = useState({lng: lng || 31.2357, lat: lat || 30.0444})
 
-
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.watchPosition(function (position) {
-    //         setLocation({lat: position.coords.latitude, lng: position.coords.longitude})
-    //     });
-    // }
-
-
     useEffect(() => {
         formikProps?.setFieldValue(form_name, location)
     }, [location])

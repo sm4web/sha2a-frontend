@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Box from "@mui/material/Box";
 import {
     AdPage,
@@ -35,16 +35,35 @@ import KingBedIcon from '@mui/icons-material/KingBed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import StraightenIcon from '@mui/icons-material/Straighten';
 import GoogleMaps from "../../components/google-map/googleMaps";
+import {getProperty} from "../../features/getProperties/getPropertiesSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {useParams} from "react-router-dom";
+import Loader from "../../components/loader/Loader";
+import useGeoCode from "../../utils/Geocode/useGeoCode";
 
 const AdvertisementPage = () => {
+    const [data, setData] = useState({})
+    const loading = useSelector(state => state.properties.isLoading)
+    const dispatch = useDispatch()
+    const {id} = useParams()
+
+    useEffect(() => {
+        dispatch(getProperty({id, setData}))
+    }, [])
+
+    const {title, ad_type, description, price, space, number_of_rooms, location_long: lng, location_lat: lat} = data
+
+    const address = useGeoCode(lat, lng)
+
+    if (loading) return <Loader/>
     return (
         <Box sx={AdPage}>
             <Box sx={AdPage__ImageBar}>
                 <Typography sx={AdPage__BreadCrmp} variant={"h5"}>
-                    Home / Ad Title
+                    Home / {title}
                 </Typography>
                 <Typography sx={AdPage__AdTitle} variant={"h2"}>
-                    Ad Title
+                    {title}
                 </Typography>
             </Box>
             <Box sx={{
@@ -53,83 +72,64 @@ const AdvertisementPage = () => {
                 mt: {md: "64px", xs: "0"}
             }}>
                 <PropertyImagesSeller/>
-                <PropertyInfoAddress/>
+                {/*<PropertyInfoAddress/>*/}
+                <Box sx={AdPage__AdDetailsContainer}>
+                    <Box sx={AdPage__AdDetails}>
+                        <Box sx={AdPage__AdHeader}>
+                            <Typography sx={AdPage__AdHeaderName} variant={"h4"}>
+                                {title}
+                            </Typography>
+                            <Typography sx={AdPage__AdHeaderPrice} variant={"h4"}>
+                                {price?.toLocaleString()}
+                            </Typography>
+                        </Box>
+                        <Box sx={AdPage__AdHeader}>
+                            <Typography sx={AdPage__AdHeaderAddress} variant={"h4"}>
+                                <img src={images.addressIcon} height={18} alt=""/> {address}
+                            </Typography>
+                        </Box>
+                        <Box sx={AdPage__AdHeaderFeatures}>
+                            <Grid container spacing={2}>
+                                <Grid item lg={2} md={4} xs={6}>
+                                    <Box sx={AdPage__AdHeaderFeature}>
+                                        <KingBedIcon/>
+                                        <h3>{number_of_rooms} Bedrooms</h3>
+                                    </Box>
+                                </Grid>
+
+                                <Grid item lg={2} md={4} xs={6}>
+                                    <Box sx={AdPage__AdHeaderFeature}>
+                                        <BathtubIcon/>
+                                        <h3>2 Bedrooms</h3>
+                                    </Box>
+                                </Grid>
+
+                                <Grid item lg={2} md={4} xs={6}>
+                                    <Box sx={AdPage__AdHeaderFeature}>
+                                        <StraightenIcon/>
+                                        <h3>{space} m</h3>
+                                    </Box>
+                                </Grid>
+
+                            </Grid>
+                        </Box>
+                        <Box sx={AdPage_AdPropertyDescContainer}>
+                            <Typography sx={AdPage__AdPropertyDescTitle} variant={"h5"}>
+                                Property Description
+                            </Typography>
+                            <Typography sx={AdPage__AdPropertyDescContent} variant={"h5"}>
+                                {description}
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box sx={AdPage__AdAddress}>
+                        <GoogleMaps form_name={"a7a"} lat={lat} lng={lng}/>
+                    </Box>
+                </Box>
             </Box>
         </Box>
     );
 };
-
-
-const PropertyInfoAddress = () => {
-
-    const FeaturesSection = () => {
-        return (
-            <Box sx={AdPage__AdHeaderFeatures}>
-                <Grid container spacing={2}>
-                    <Grid item lg={2} md={4} xs={6}>
-                        <Box sx={AdPage__AdHeaderFeature}>
-                            <KingBedIcon/>
-                            <h3>2 Bedrooms</h3>
-                        </Box>
-                    </Grid>
-
-                    <Grid item lg={2} md={4} xs={6}>
-                        <Box sx={AdPage__AdHeaderFeature}>
-                            <BathtubIcon/>
-                            <h3>2 Bedrooms</h3>
-                        </Box>
-                    </Grid>
-
-                    <Grid item lg={2} md={4} xs={6}>
-                        <Box sx={AdPage__AdHeaderFeature}>
-                            <StraightenIcon/>
-                            <h3>2 Bedrooms</h3>
-                        </Box>
-                    </Grid>
-
-                </Grid>
-            </Box>
-        )
-    }
-
-    return (
-        <Box sx={AdPage__AdDetailsContainer}>
-            <Box sx={AdPage__AdDetails}>
-                <Box sx={AdPage__AdHeader}>
-                    <Typography sx={AdPage__AdHeaderName} variant={"h4"}>
-                        New vintage apartment
-                        on the Green Avenue
-                    </Typography>
-                    <Typography sx={AdPage__AdHeaderPrice} variant={"h4"}>
-                        250,000.00
-                    </Typography>
-                </Box>
-                <Box sx={AdPage__AdHeader}>
-                    <Typography sx={AdPage__AdHeaderAddress} variant={"h4"}>
-                        <img src={images.addressIcon} height={18} alt=""/> 329 Ambarukmo St, Brooklyn, NY
-                    </Typography>
-                </Box>
-                <FeaturesSection/>
-                <Box sx={AdPage_AdPropertyDescContainer}>
-                    <Typography sx={AdPage__AdPropertyDescTitle} variant={"h5"}>
-                        Property Description
-                    </Typography>
-                    <Typography sx={AdPage__AdPropertyDescContent} variant={"h5"}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget dolor nam risus sem hac consequat.
-                        Nec vitae consectetur velit eu, etiam. Nulla senectus dictumst mauris nunc. Senectus nulla
-                        lectus nam quis nisl non morbi non.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget dolor nam risus sem hac consequat.
-                        Nec vitae consectetur velit eu, etiam. Nulla senectus dictumst mauris nunc. Senectus nulla
-                        lectus
-                    </Typography>
-                </Box>
-            </Box>
-            <Box sx={AdPage__AdAddress}>
-                <GoogleMaps form_name={"a7a"} lat={30.0444} lng={31.2357}/>
-            </Box>
-        </Box>
-    )
-}
 
 
 const PropertyImagesSeller = () => {
@@ -171,19 +171,35 @@ const PropertyImagesSeller = () => {
                                     type={"tel"}
                                     value={'01206944093'}
                                 />
-                                <InputHandler
-                                    fullWidth
-                                    InputProps={{
-                                        readOnly: true,
-                                        startAdornment: (
-                                            <InputAdornment position="start">
-                                                <img src={images.chatIcon} width={20} alt=""/>
-                                            </InputAdornment>
-                                        ),
-                                    }}
-                                    name={"chat"}
-                                    value={'Chat With Seller'}
-                                />
+                                {/*<a*/}
+                                {/*    href="https://wa.me/+201554304409"*/}
+                                {/*    className="whatsapp_float"*/}
+                                {/*    target="_blank"*/}
+                                {/*    rel="noopener noreferrer"*/}
+                                {/*>*/}
+                                {/* cht*/}
+                                {/*</a>*/}
+                                <Box sx={{
+                                    background: '#fff',
+                                    borderRadius: '10px',
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "18px",
+                                    boxShadow: "0px 4px 12px rgba(0,0,0,0.12)",
+                                    p: 2,
+                                    color: "primary.dark",
+                                    textDecoration: 'none'
+                                }}
+                                     component={'a'}
+                                     href="https://wa.me/+201554304409"
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                >
+                                    <img src={images.chatIcon} width={22} alt=""/>
+                                    <Typography variant={"body1"} sx={{fontWeight: '600'}}>
+                                        Chat With Seller
+                                    </Typography>
+                                </Box>
                             </Form>
                         )}
                     </Formik>
