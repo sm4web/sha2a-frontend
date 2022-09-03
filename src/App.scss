@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$base-color: #2C4CC9;
+$secondary-color: #0B0E16;
+$gray: #cacaca;
+$GilroyBold: 'GiloryBold';
+$GilroyMedium: 'GiloryMedium';
+$GilroySemiBold: 'GilorySemiBold';
+$GilroyRegular: 'GiloryRegular';
+$GilroyThin: 'GiloryThin';
+
+
+img {
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $base-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

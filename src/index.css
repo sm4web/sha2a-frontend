@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'GiloryMedium', serif;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@font-face {
+    font-family: "GiloryLight";
+    src: url("./assets/fonts/Gilroy-Light.ttf");
+}
+
+@font-face {
+    font-family: "GiloryRegular";
+    src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GiloryMedium";
+    src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: "GilorySemiBold";
+    src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "GiloryBold";
+    src: url("./assets/fonts/Gilroy-Bold.ttf");
+}
+
+

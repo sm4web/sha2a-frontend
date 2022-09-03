@@ -1,0 +1,1 @@
+export const HomeStyle = {display: "flex", flexDirection: "column", flexGrow: 1, gap: 2}

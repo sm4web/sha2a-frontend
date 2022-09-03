@@ -1,0 +1,111 @@
+@import '../../App.scss';
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  background: $secondary-color;
+
+
+  // mobile screen
+  @media screen and (max-width: 720px) {
+    padding: 0 5%;
+  }
+
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  color: white;
+  font-size: 1.4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  li {
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.8em;
+      font-family: $GilroyMedium;
+      margin-right: 2em;
+    }
+  }
+
+}
+
+.header__options {
+  display: flex;
+  gap: 1em;
+
+  button {
+    font-size: 1.8em;
+    border: none;
+    border-radius: 5em;
+    font-family: $GilroyBold;
+    margin-left: 2em;
+    cursor: pointer;
+  }
+
+  .header__loginOption {
+    background: transparent;
+    color: white;
+  }
+
+  .header__registerOption {
+    background: white;
+    color: $base-color;
+    width: 175px;
+    height: 60px;
+  }
+
+
+}
+
+.header__userOptions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
+.header__userAvatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  h3 {
+    font-size: 22px;
+    font-family: GiloryRegular;
+    color: white;
+  }
+}
+
+.header__desktop {
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
+.logo {
+  width: 84px;
+  @media screen and (max-width: 720px) {
+    width: 64px;
+  }
+}
