@@ -171,14 +171,6 @@ const PropertyImagesSeller = () => {
                                     type={"tel"}
                                     value={'01206944093'}
                                 />
-                                {/*<a*/}
-                                {/*    href="https://wa.me/+201554304409"*/}
-                                {/*    className="whatsapp_float"*/}
-                                {/*    target="_blank"*/}
-                                {/*    rel="noopener noreferrer"*/}
-                                {/*>*/}
-                                {/* cht*/}
-                                {/*</a>*/}
                                 <Box sx={{
                                     background: '#fff',
                                     borderRadius: '10px',

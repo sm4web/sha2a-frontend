@@ -16,8 +16,9 @@ const Header = () => {
     const {username} = useSelector(state => state.user.data)
     const dispatch = useDispatch()
     const handleRoute = (event) => {
+        console.dir(event.target)
         const route = event.target.name
-        router(`${route}`)
+        router(`/${route}`)
     }
 
 
@@ -35,7 +36,7 @@ const Header = () => {
             return (
                 <div className={styles.header__userOptions}>
                     <MessageCircle color={"white"}/>
-                    <div className={styles.header__userAvatar}>
+                    <div className={styles.header__userAvatar} onClick={() => router("/settings")}>
                         <Avatar radius={"xl"}
                                 alt={"it's me"}/>
                         <h3>

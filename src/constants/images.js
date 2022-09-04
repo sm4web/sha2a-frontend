@@ -15,6 +15,8 @@ import logo from '../assets/images/logo.png'
 import logoDark from '../assets/images/logo-dark.png'
 import loader from '../assets/images/loader.svg'
 import OTPIcon from '../assets/icons/security.png'
+import settingsArrowRight from '../assets/icons/settings-menu-arrow-right.png'
+import settingsArrowLeft from '../assets/icons/settings-menu-arrow-left.png'
 
 export default {
     signinHero,
@@ -23,11 +25,13 @@ export default {
     chatIcon, logoDark,
     OTPIcon,
     searchIcon,
+    settingsArrowLeft,
     logo, loader,
     addressIcon,
     phoneIcon,
     UploadProfilePic,
     SeekingIcon,
+    settingsArrowRight,
     OfferingIcon,
     locationIcon,
     clearIcon,

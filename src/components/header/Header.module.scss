@@ -80,6 +80,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  cursor: pointer;
   @media screen and (max-width: 720px) {
     display: none;
   }

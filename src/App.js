@@ -12,6 +12,7 @@ import CreateAdvertisement from "./pages/createAdvertisement/createAdvertisement
 import Favorite from "./pages/favorite/favorite";
 import MyAds from "./pages/myAds/myAds";
 import UserVerify from "./pages/userVerify/userVerify";
+import Settings from "./pages/settings/Settings";
 
 const AdvertisementPage = React.lazy(() => import("./pages/advertisementPage/advertisementPage"))
 
@@ -30,7 +31,7 @@ function App() {
                                 <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
                                 <Route path={"advertisements/:id"} element={<AdvertisementPage/>}/>
                                 <Route path={"favorites"} element={<Favorite/>}/>
-                                <Route path={"settings"} element={<h1>Settings</h1>}/>
+                                <Route path={"settings/*"} element={<Settings/>}/>
                                 <Route path={"my-ads"} element={<MyAds/>}/>
                             </Route>
                         </Route>

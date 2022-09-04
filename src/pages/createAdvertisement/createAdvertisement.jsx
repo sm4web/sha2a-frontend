@@ -97,7 +97,9 @@ const CreateAdvertisement = () => {
                             gap: "5%"
                         }}>
                             <Button sx={CreateAd__SubmitButton} type={"submit"}>Create</Button>
-                            <Button sx={CreateAd__CancelButton}>Cancel</Button>
+                            <Button sx={CreateAd__CancelButton} onClick={() => {
+                                router('/')
+                            }}>Cancel</Button>
                             <RenderSnackbar open={Boolean(error)} setOpen={setError} content={error}/>
                         </Box>
                     </Form>
