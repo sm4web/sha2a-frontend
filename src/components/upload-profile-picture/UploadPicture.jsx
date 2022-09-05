@@ -25,7 +25,7 @@ const UploadPicture = ({name}) => {
         <Box
             sx={ContainerStyle}
             onClick={
-                formikProps.values.profile_photo ? handleRemoveImageLocally : handleChange
+                formikProps.values[name] ? handleRemoveImageLocally : handleChange
             }
         >
             <input
@@ -37,15 +37,15 @@ const UploadPicture = ({name}) => {
             />
             <img
                 src={
-                    formikProps.values.profile_photo
-                        ? URL.createObjectURL(formikProps.values.profile_photo)
+                    formikProps.values[name]
+                        ? URL.createObjectURL(formikProps.values[name])
                         : UploadPic
                 }
                 style={ProfilePicStyle}
                 alt="User profile"
             />
             <Typography variant="body1" color="initial" sx={LabelStyle}>
-                {formikProps.values.profile_photo
+                {formikProps.values[name]
                     ? "Remove profile picture"
                     : "Upload profile picture"}
             </Typography>

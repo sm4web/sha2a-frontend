@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
 import {SettingsDrawer, SettingsDrawer_Menu, SettingsDrawer_MenuItem, SettingsDrawer_MenuItem_Left} from "./style";
 import {images} from "../../constants";
+import SettingsProfile from "../settingsProfile/settingsProfile";
 
 const options = [
     {label: "Profile", subtitle: "Name, Username, Email address"},
@@ -29,15 +30,15 @@ function Settings(props) {
                             <p>{item.subtitle}</p>
                         </Box>
                         {settingsPath === item.label.toLowerCase() ?
-                            <img src={images.settingsArrowLeft} width={"28px"}/> :
-                            <img src={images.settingsArrowRight} width={"28px"}/>
+                            <img src={images.settingsArrowLeft} width={"28px"} alt={"settings sha2a arrow Button icon"}/> :
+                            <img src={images.settingsArrowRight} width={"28px"} alt={"settings sha2a arrow Button icon"}/>
                         }
                     </Box>
                 ))}
             </Box>
         </Box>
         <Routes>
-            <Route path={'/profile'} element={'Profile'}/>
+            <Route path={'/profile'} element={<SettingsProfile />}/>
             <Route path={'/password'} element={'Password'}/>
             <Route path={'/notifications'} element={'notifications'}/>
         </Routes>
