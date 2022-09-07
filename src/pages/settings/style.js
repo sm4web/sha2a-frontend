@@ -16,7 +16,9 @@ export const SettingsDrawer = {
 
 
 export const SettingsDrawer_Menu = {
-    display: "flex", flexDirection: "column", gap: "24px"
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px"
 }
 
 export const SettingsDrawer_MenuItem = {
@@ -42,4 +44,3 @@ export const SettingsDrawer_MenuItem_Left = {
         color: "rgba(0,0,34,0.5)"
     }
 }
-

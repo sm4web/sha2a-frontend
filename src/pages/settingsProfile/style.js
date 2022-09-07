@@ -18,3 +18,18 @@ export const usernameField = {
         },
     },
 }
+
+
+export const PInfoCustomDropDown = {
+    backgroundColor: "#fff",
+    height: "60px",
+    width: "100%",
+    fontSize: "16px",
+    fontFamily: "GilorySemiBold",
+    color: "rgba(1,1,1,.9)",
+    padding: "12px",
+    border: "0px solid",
+    boxShadow: "0px 3px 14px rgba(0, 0, 0, 0.09)",
+    borderRadius: "10px",
+    appearance: "none",
+}
