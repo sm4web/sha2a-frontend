@@ -22,7 +22,6 @@ export const createProperty = createAsyncThunk('create-property/createProperty',
     })
 })
 
-
 export const createPropertySlice = createSlice({
     name: 'create-property', initialState, reducers: {}, extraReducers: {
         [createProperty.pending]: (state) => {

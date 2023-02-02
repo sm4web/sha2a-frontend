@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.scss';
-import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
+import React from "react";
+import "./App.scss";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Login from "./pages/login/login.jsx";
 import ProtectedRoute from "./components/protected-routes/protectedRoute";
@@ -14,54 +14,57 @@ import MyAds from "./pages/myAds/myAds";
 import UserVerify from "./pages/userVerify/userVerify";
 import Settings from "./pages/settings/Settings";
 
-const AdvertisementPage = React.lazy(() => import("./pages/advertisementPage/advertisementPage"))
-
+const AdvertisementPage = React.lazy(() =>
+  import("./pages/advertisementPage/advertisementPage")
+);
 
 function App() {
+  return (
+    <div className="App">
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <BrowserRouter>
+          <Routes>
+            {/* <Route element={<ProtectedRoute />}> */}
+            <Route path={"/"} element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path={"create-ad"} element={<CreateAdvertisement />} />
+              <Route
+                path={"advertisements/:id"}
+                element={<AdvertisementPage />}
+              />
+              <Route path={"favorites"} element={<Favorite />} />
+              <Route path={"settings/*"} element={<Settings />} />
+              <Route path={"my-ads"} element={<MyAds />} />
+            </Route>
+            {/* </Route> */}
 
-
-    return (
-        <div className="App">
-            <React.Suspense fallback={<div>Loading...</div>}>
-                <BrowserRouter>
-                    <Routes>
-                        <Route element={<ProtectedRoute/>}>
-                            <Route path={"/"} element={<Layout/>}>
-                                <Route index element={<Home/>}/>
-                                <Route path={"create-ad"} element={<CreateAdvertisement/>}/>
-                                <Route path={"advertisements/:id"} element={<AdvertisementPage/>}/>
-                                <Route path={"favorites"} element={<Favorite/>}/>
-                                <Route path={"settings/*"} element={<Settings/>}/>
-                                <Route path={"my-ads"} element={<MyAds/>}/>
-                            </Route>
-                        </Route>
-
-                        {/*  START -- All the register steps  */}
-                        <Route exact path={"/login"} element={<Login/>}/>
-                        <Route exact path={"/register"} element={<Register/>}/>
-                        <Route exact path={"/user-verify"} element={<UserVerify/>}/>
-                        <Route exact path={"/personal-info"} element={<CompleteRegister/>}/>
-                        {/*  END -- All the register steps  */}
-
-                    </Routes>
-                </BrowserRouter>
-            </React.Suspense>
-        </div>
-    );
+            {/*  START -- All the register steps  */}
+            <Route exact path={"/login"} element={<Login />} />
+            <Route exact path={"/register"} element={<Register />} />
+            <Route exact path={"/user-verify"} element={<UserVerify />} />
+            <Route
+              exact
+              path={"/personal-info"}
+              element={<CompleteRegister />}
+            />
+            {/*  END -- All the register steps  */}
+          </Routes>
+        </BrowserRouter>
+      </React.Suspense>
+    </div>
+  );
 }
-
 
 const Layout = () => {
-    return (
-        <div>
-            <Header/>
-            <div>
-                <SideNav/>
-                <Outlet/>
-            </div>
-        </div>
-    );
-}
-
+  return (
+    <div>
+      <Header />
+      <div>
+        <SideNav />
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 
 export default App;
